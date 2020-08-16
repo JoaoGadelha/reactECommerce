@@ -135,6 +135,7 @@ position:relative;
   background-color:#F7F7F7;
   border-radius:5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index:2;
 }
 
 .App header .header-row-3 .grid-container .ddc1 {
@@ -173,4 +174,66 @@ left:3rem;
   font-size:16px;
   text-align:left;
 }
+
+/* HeaderRow4 ----------------------------------------------------------------------*/
+
+.App .header-row-4 {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  place-items:center;
+  text-align:center;
+}
+
+.App .header-row-4 a {
+  text-decoration:none;
+  margin:10px 0;
+  color: #235AC6;
+  position:relative;
+}
+
+.App .header-row-4 a:after {
+  content:'';
+  height:1px;
+  width:0;
+  position:absolute;
+  left:50%;
+  transition: left 0.3s ease, width 0.3s ease;
+  display:block;
+  bottom:0;
+  background:#235AC6;
+}
+
+.App .header-row-4 a:hover:after {
+  width:100%;
+  left:0;
+}
+
+/* Banner1 ----------------------------------------------------------------------*/
+.App .banner1 .banner1-wrapper {
+  display:inline-block;
+  background: linear-gradient(90deg, rgba(231,68,47,1) 0%, rgba(231,68,47,1) 27%, rgba(116,30,19,1) 69%, rgba(116,30,19,1) 100%);}
+
+.App .banner1 .banner1-wrapper .banner1-img {
+  width:50%;
+  height:auto;
+  margin:0 auto;
+  display:block;
+}
+
+/* Carousel1 ----------------------------------------------------------------------*/
+.App .carousel1-container {
+    width:100%;
+    overflow:hidden;
+
+}
+
+.App .carousel1-container .carousel1-slider {
+display:flex;
+}
+
+.App .carousel1-container .carousel1-slider img {
+  width:100%;
+  height:auto;
+}
+
 
