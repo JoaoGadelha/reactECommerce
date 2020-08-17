@@ -7,10 +7,10 @@ const HeaderRow2 = () => {
             <img src={logo} alt='logo_electro_shopping'></img>
             <form>
                 <input placeholder='What are you looking for ?'></input>
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
             </form>
             <span>
-                <i class="fas fa-user"></i>
+                <i className="fas fa-user"></i>
                 <strong>
                     <a href='www.google.com'>Log In or Sign up</a>
                 </strong>
@@ -18,7 +18,7 @@ const HeaderRow2 = () => {
                     <a href='www.google.com'>To see your products</a>
                 </span>
             </span>
-            <i class="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart"></i>
         </div>
     )
 }
