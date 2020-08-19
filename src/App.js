@@ -17,8 +17,8 @@ function App() {
         <HeaderRow3/>
         <HeaderRow4/>
         <Banner1/>
-        <Carousel1/>
       </header>
+      <Carousel1/>
 
     </div>
   );
