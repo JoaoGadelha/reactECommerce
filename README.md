@@ -1,7 +1,7 @@
 # reactECommerce
 Ecommerce site built with React.js and RainForest API
 
-Live site: https://joaoricardotg-reactecommerce.netlify.app
+Live site: https://joaoricardotg-reactecommerce.netlify.app  (still under construction)
 
 ## Usage
 
