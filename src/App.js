@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './img/base/logo.svg';
 import './App.css';
 import HeaderRow1 from './Components/HeaderRow1'
 import HeaderRow2 from './Components/HeaderRow2'
@@ -7,6 +6,8 @@ import HeaderRow3 from './Components/HeaderRow3'
 import HeaderRow4 from './Components/HeaderRow4'
 import Banner1 from './Components/Banner1'
 import Carousel1 from './Components/Carousel1'
+import Promotion1 from './Components/Promotion1'
+import Carousel2 from './Components/Carousel2'
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Banner1/>
       </header>
       <Carousel1/>
-
+      <Promotion1/>
+      <Carousel2/>
     </div>
   );
 }
