@@ -355,23 +355,64 @@ margin-bottom:-6px;
   height:45%;
 }
 
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content  {
+  text-decoration:none;
+}
 
 .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content > * {
+  min-height: 20px;
+}
+
+/*
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content a > * {
   min-height:20px;
   width:80%;
   margin:0 auto;
   text-align:left;
-}
+}*/
 
 .App .carousel2-wrapper .carousel2-container .fas {
   color:blue;
   font-size:30px;
   position:absolute;
-  top:30%;
+  top:25%;
   cursor: pointer;
 }
 
 .App .carousel2-wrapper .carousel2-container .fas.fa-chevron-circle-right {
   right:0;
 }
+
+
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .product-details {
+  width:80%;
+  margin-top:20px;
+  text-align:left;
+  color:black;
+  min-height:88px;
+}
+
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .old-price {
+  color:black;
+  margin-top:30px;
+  font-size:13px;
+  text-align:left;
+  font-weight: bold;
+}
+
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .old-price span {
+  text-decoration:line-through;
+}
+
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .actual-price {
+  font-size:30px;
+  text-align:left;
+  font-weight: bold;
+}
+
+.App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .installment {
+  text-align:left;
+}
+
+
 
