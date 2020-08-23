@@ -7,6 +7,7 @@ import HeaderRow4 from './Components/HeaderRow4'
 import Banner1 from './Components/Banner1'
 import Carousel1 from './Components/Carousel1'
 import Promotion1 from './Components/Promotion1'
+import SpecialCarousel from './Components/SpecialCarousel'
 import Carousel2 from './Components/Carousel2'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       </header>
       <Carousel1/>
       <Promotion1/>
+      <SpecialCarousel/>
       <Carousel2/>
     </div>
   );

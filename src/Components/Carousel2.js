@@ -12,6 +12,7 @@ import img9 from '../img/carousel2/img9.jpeg'
 import img10 from '../img/carousel2/img10.webp'
 import img11 from '../img/carousel2/img11.jpeg'
 import img12 from '../img/carousel2/img12.jpeg'
+import Carousel2Item from './Carousel2Item.js'
 
 
 
@@ -24,7 +25,6 @@ const Carousel2 = () => {
     let position = 0;
 
     useEffect(() => {
-        console.log(document.getElementsByClassName('fa-chevron-circle-left')[0]);
         document.getElementsByClassName('fa-chevron-circle-left')[1].style.display='none';
 
         /*carousel2 = document.getElementsByClassName('carousel2');
@@ -37,13 +37,14 @@ const Carousel2 = () => {
 
     const nextFcn = () => {
         document.getElementsByClassName('fa-chevron-circle-left')[1].style.display='block';
-        carousel2 = document.getElementsByClassName('carousel2');
+        carousel2 = document.getElementsByClassName('carousel2');        
         carousel2ChildrenArray = carousel2[0].children;
         if (counter + numVis < carousel2ChildrenArray.length) {
             if(counter + 2*numVis >= carousel2ChildrenArray.length){
                 document.getElementsByClassName('fa-chevron-circle-right')[1].style.display='none';
             }
-            walkDist = carousel2[0].offsetWidth * numVis;
+            walkDist = (carousel2ChildrenArray[0].offsetWidth+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-left'))+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-right')))*numVis;
+            console.log((carousel2ChildrenArray[0].offsetWidth+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-left'))+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-right')))*numVis);
             position -= walkDist;
             carousel2[0].style.transform = 'translateX(' + position + 'px)';
             for (let i = 0; i < carousel2ChildrenArray.length; i++) {
@@ -57,12 +58,13 @@ const Carousel2 = () => {
     const prevFcn = () => {
         document.getElementsByClassName('fa-chevron-circle-right')[1].style.display='block';
         carousel2 = document.getElementsByClassName('carousel2');
+        
         carousel2ChildrenArray = carousel2[0].children;
         if (counter - numVis >= 0) {
             if(counter - 2*numVis < 0) {
                 document.getElementsByClassName('fa-chevron-circle-left')[1].style.display='none';
             }
-            walkDist = carousel2[0].offsetWidth * numVis;
+            walkDist = (carousel2ChildrenArray[0].offsetWidth+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-left'))+parseFloat(window.getComputedStyle(carousel2ChildrenArray[0]).getPropertyValue('margin-right')))*numVis;
             position += walkDist;
             carousel2[0].style.transform = 'translateX(' + position + 'px)';
             for (let i = 0; i < carousel2ChildrenArray.length; i++) {
@@ -88,154 +90,21 @@ const Carousel2 = () => {
             <div className='carousel2-container'>
                 <Deadline1 />
                 <div className='carousel2' onTransitionEnd={hideItems}>
-                    <div className='carousel2-item visible'>
-                    <a className='content' href='#'>
-                        <img src={img1}></img>                        
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Washing Machine Brastemp BWK12AB with Advanced Stain Removal White - 12Kg
-                            </div>
-                            <div className='old-price'>Old price: <span>$349.90</span></div>
-                            <div className='actual-price'>$299.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item visible'>
-                        <a className='content' href='#'>
-                        <img src={img2}></img>                                                        <div className='flag'></div>
-                            <div className='product-details'>
-                               Professional Ceramic Electric Hairbrush MegaHair with Natural Bristle and Nylon
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$19.90</div>
-                            <div className='installment'></div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item visible'>
-                        <a className='content' href='#'>
-                        <img src={img3}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Wireless Earphones JBL Tune 220TWS Pure Bass  Battery 19 Hours White
-                            </div>
-                            <div className='old-price'>Old price: <span>119.90</span></div>
-                            <div className='actual-price'> $99.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item visible'>
-                        <a className='content' href='#'>
-                        <img src={img4}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Acoustic Guitar Nylon Ac39 Pink Memphis By Tagima
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$59.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img5}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-Air Conditioner Split Samsung Digital Inverter 11.500 BTU/h Frio AR12NVFPCWKNAZ
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$459.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img6}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Smart TV LED 43" Full HD Samsung T5300 HDR, Tizen OS, Wi-Fi...
-                            </div>
-                            <div className='old-price'>Old price: <span>349.90</span></div>
-                            <div className='actual-price'>$329.90</div>
-                            <div className='installment'>Up to 12 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img7}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Laundry Detergent Comfort Fiber Protect 3L
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$32.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img8}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-Powdered Milk for Kids Ninho Phases 1 Kit 6 Cans 800G
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$49.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img9}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-         Digital Camera and Recorder Xtrax Selfie 4K 16MP Red
-                            </div>
-                            <div className='old-price'>Old price:<span>$89.90</span></div>
-                            <div className='actual-price'>$79.90</div>
-                            <div className='installment'>Up to 12 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img10}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Couple Microfiber Sheets  180g/m² - Coral
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>
-                                $24.90
-                            </div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img11}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Kit Gin Beefeater Dry 750ml + Wine Glass 550ml
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$39.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
-                    <div className='carousel2-item'>
-                        <a className='content' href='#'>
-                        <img src={img12}></img>
-                            <div className='flag'></div>
-                            <div className='product-details'>
-                                Bed Box Queen Size + Matress Herval Capri Pillow Inn e Bagged Springs 64x158x1...
-                            </div>
-                            <div className='old-price'></div>
-                            <div className='actual-price'>$129.90</div>
-                            <div className='installment'>Up to 10 payments interest-free</div>
-                        </a>
-                    </div>
+                  <Carousel2Item flag='' prodDetail='Washing Machine Brastemp BWK12AB with Advanced Stain Removal White - 12Kg' oldPrice={<>Old price: <span>$349.90</span></>} price='$299.90' install='Up to 10 payments interest-free' prodImg = {img1} visible={true}/>
+                  <Carousel2Item flag='' prodDetail='Professional Ceramic Electric Hairbrush MegaHair with Natural Bristle and Nylon' oldPrice={''} price='$19.90' install='' prodImg = {img2} visible={true}/>
+                  <Carousel2Item flag='' prodDetail='Wireless Earphones JBL Tune 220TWS Pure Bass  Battery 19 Hours White' oldPrice={<>Old price: <span>$119.90</span></>} price='$99.90' install='Up to 12 payments interest-free' prodImg = {img3} visible={true}/>
+                  <Carousel2Item flag='' prodDetail='Acoustic Guitar Nylon Ac39 Pink Memphis By Tagima' oldPrice={''} price='$59.90' install='Up to 10 payments interest-free' prodImg = {img4} visible={true}/>
+                  <Carousel2Item flag='' prodDetail='Air Conditioner Split Samsung Digital Inverter 11.500 BTU/h Frio AR12NVFPCWKNAZ' oldPrice={''} price='$459.90' install='Up to 10 payments interest-free' prodImg = {img5} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Smart TV LED 43" Full HD Samsung T5300 HDR, Tizen OS, Wi-Fi...' oldPrice={<>Old price: <span>$349.90</span></>} price='$329.90' install='Up to 12 payments interest-free' prodImg = {img6} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Laundry Detergent Comfort Fiber Protect 3L' oldPrice={''} price='$32.90' install='Up to 10 payments interest-free' prodImg = {img7} visible={''}/>                
+                  <Carousel2Item flag='' prodDetail='Powdered Milk for Kids Ninho Phases 1 Kit 6 Cans 800G' oldPrice={''} price='$49.90' install='Up to 10 payments interest-free' prodImg = {img8} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Digital Camera and Recorder Xtrax Selfie 4K 16MP Red' oldPrice={<>Old price: <span>$89.90</span></>} price='$79.90' install='Up to 12 payments interest-free' prodImg = {img9} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Couple Microfiber Sheets  180g/m² - Coral' oldPrice={''} price='$24.90' install='Up to 10 payments interest-free' prodImg = {img10} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Kit Gin Beefeater Dry 750ml + Wine Glass 550ml' oldPrice={''} price='$39.90' install='Up to 10 payments interest-free' prodImg = {img11} visible={''}/>
+                  <Carousel2Item flag='' prodDetail='Bed Box Queen Size + Matress Herval Capri Pillow Inn e Bagged Springs 64x158x1...' oldPrice={''} price='$129.90' install='Up to 10 payments interest-free' prodImg = {img12} visible={''}/>
                 </div>
-                <i className="fas fa-chevron-circle-left " onClick={prevFcn}></i>
-                <i className="fas fa-chevron-circle-right " onClick={nextFcn}></i>
+                <i className="fas fa-chevron-circle-left"  onClick={prevFcn}></i>
+                <i className="fas fa-chevron-circle-right" onClick={nextFcn}></i>
             </div>
         </div>
     )
