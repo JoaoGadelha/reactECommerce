@@ -350,6 +350,7 @@ margin-bottom:-6px;
   left:25%;
   height:100%;
   width:100px;
+  padding:20px;
 }
 
 .App .special-carousel-wrapper .special-carousel-products {
@@ -361,6 +362,23 @@ margin-bottom:-6px;
   transition: ease all 1s;
   left: -50%;
   border-radius:10px;
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.App .special-carousel-wrapper .special-carousel-products-container .special-carousel-products img {
+  height:auto;
+  width:100%;
+  margin-left:10px;
+  margin-top:10px;
+}
+
+.App .special-carousel-wrapper .special-carousel-products .scp-content {
+  margin:10px 20px;
+}
+
+.App .special-carousel-wrapper .special-carousel-products * {
+  font-size:10px;
 }
 
 
@@ -437,6 +455,8 @@ margin-bottom:-6px;
   left:auto;
   opacity: 1;
 }
+
+
 
 /* Carousel2 -------------------------------------------------------*/
 
