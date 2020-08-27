@@ -1,4 +1,4 @@
-body {
+html, body {
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -611,6 +611,174 @@ line-height:30px;
   margin:0;
 }
 
+/* Categories ------------------------------------------------------*/
+
+.App .categories-container {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  width:1120px;
+  background:white;
+  margin-top:50px;
+  border-radius:20px;
+  padding:40px 20px;
+  place-items: center;
+}
+
+.App .categories-container .categories-item {
+  max-width:186px;
+  height:100%;
+}
+
+.App .categories-container .categories-item a {
+  text-decoration:none;
+  text-align:center;
+}
+
+.App .categories-container .categories-item a img {
+  width:170px;
+}
+
+.App .categories-container .categories-item a:hover  img {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+
+.App .categories-container .categories-item:nth-child(10) {
+  position:relative;
+
+}
+
+.App .categories-container .categories-item:nth-child(10) a {
+  width: 165px;
+  height:165px;
+  border-radius: 50%;
+  top:0;
+  left:-85px;
+  position:absolute;
+  background: #F7F7F7;
+}
+
+.App .categories-container .categories-item:nth-child(10) a:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.App .categories-container .categories-item:nth-child(10) a img {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  box-shadow:0 0 0 0; 
+}
 
 
+.App .categories-container .categories-item:nth-child(10) a p {
+  position: relative;
+  top:175px;
+}
 
+/* Most Wanted Carousel ----------------------------------------------------------*/
+
+.App .most-wanted-container {
+    width: 1120px;
+    background:white;
+    border-radius: 4px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding:20px;
+    height:200px;
+    border: solid blue 1px;
+}
+
+.App .most-wanted-container .pointy-container {
+  display:grid;
+  border:solid red 1px;
+  grid-template-columns: 3fr 1fr;
+}
+
+.App .most-wanted-container .pointy-container .pointy-box1 {
+  height:200px;
+  background: #F6F6F6;
+  display:grid;
+  place-items: center;
+  font-size: 30px;
+  text-align:center;
+  color: #0033C6;
+}
+
+.App .most-wanted-container .pointy-container .pointy-box2 {
+  width:0;
+  height:0;
+  border-left: solid #F6F6F6 50px;
+  border-top: solid transparent 100px;
+  border-bottom: solid transparent 100px;
+}
+
+.App .most-wanted-container .mwcar-container {
+  height:200px;
+  position:relative;
+  border: solid red 1px;
+  overflow: hidden;
+}
+
+.App .most-wanted-container .mwcar-container button {
+  position:absolute;
+  top:50%;
+  right: 0;
+}
+
+.App .most-wanted-container .mwcar-container button:nth-child(2) {
+  left: 0;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 120px;
+  transition: 0.3s ease all;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item.invisible {
+  opacity: 0;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item {
+  display:grid;
+  grid-template-columns: 1fr 3fr;
+  place-items:center;
+  width: 600px;
+  border: dotted red 1px;
+  opacity: 1;
+  height: 200px;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item img{
+  height:200px;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
+  margin-left: 50px;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
+  font-size: 20px;
+  color: #575757
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
+  font-size: 16px;
+  margin: 0;
+  margin-top:10px;
+  color: #707070;
+  text-decoration: line-through;
+}
+
+
+.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
+  font-size: 24px;
+  color: #0033C6;
+  font-weight: 800;
+  margin-top: 0px;
+  text-decoration: none;
+}

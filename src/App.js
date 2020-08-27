@@ -9,6 +9,9 @@ import Carousel1 from './Components/Carousel1'
 import Promotion1 from './Components/Promotion1'
 import SpecialCarousel from './Components/SpecialCarousel'
 import Carousel2 from './Components/Carousel2'
+import Categories from './Components/Categories'
+import MostWanted from './Components/MostWanted/MostWanted'
+
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
       <Promotion1/>
       <SpecialCarousel/>
       <Carousel2/>
+      <Categories/>
+      <MostWanted/>
     </div>
   );
 }
