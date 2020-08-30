@@ -2,7 +2,7 @@ import React from 'react'
 
 const MWCarItem = ({ img, title, oldPrice, price }) => {
     return (
-        <div className='mwcar-item invisible'>
+        <div className='mwcar-item'>
             <img src={img}></img>
             <div className='mwcar-content'>
                 <span >{title}</span>

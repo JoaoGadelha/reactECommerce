@@ -26,7 +26,6 @@ const Carousel2 = () => {
 
     useEffect(() => {
         document.getElementsByClassName('fa-chevron-circle-left')[1].style.display = 'none';
-console.log(document.getElementsByClassName('fa-chevron-circle-left'),document.getElementsByClassName('fa-chevron-circle-left')[1]);
         /*carousel2 = document.getElementsByClassName('carousel2');
         window.addEventListener('resize',() => {
             carousel2 = document.getElementsByClassName('carousel2');
@@ -103,9 +102,9 @@ console.log(document.getElementsByClassName('fa-chevron-circle-left'),document.g
                     <Carousel2Item flag='' prodDetail='Kit Gin Beefeater Dry 750ml + Wine Glass 550ml' oldPrice={''} price='$39.90' install='Up to 10 payments interest-free' prodImg={img11} visible={''} />
                     <Carousel2Item flag='' prodDetail='Bed Box Queen Size + Matress Herval Capri Pillow Inn e Bagged Springs 64x158x1...' oldPrice={''} price='$129.90' install='Up to 10 payments interest-free' prodImg={img12} visible={''} />
                 </div>
-                <i className="fas fa-chevron-circle-left" onClick={prevFcn}></i>
-                <i className="fas fa-chevron-circle-right" onClick={nextFcn}></i>
             </div>
+            <i className="fas fa-chevron-circle-left" onClick={prevFcn}></i>
+            <i className="fas fa-chevron-circle-right" onClick={nextFcn}></i>
         </div>
     )
 }

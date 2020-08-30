@@ -14,20 +14,23 @@ import img12 from '../img/categories/img12'
 
 
 const Categories = () => {
-    return(
-        <div className='categories-container'>
-            <div className='categories-item'><a href='#'><img src={img1}></img><p>Women's</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img2}></img><p>Men's</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img3}></img><p>Pets</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img4}></img><p>Toys</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img5}></img><p>Home</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img6}></img><p>Kitchen & Dining</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img7}></img><p>Kids</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img8}></img><p>Baby</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img9}></img><p>Sports & Outdoors</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img10}></img><p>Electronics</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img11}></img><p>Furniture</p></a></div>
-            <div className='categories-item'><a href='#'><img src={img12}></img><p>Patio & Garden</p></a></div>
+    return (
+        <div className='categories-wrapper'>
+            <h1>Categories</h1>
+            <div className='categories-container'>
+                <div className='categories-item'><a href='#'><img src={img1}></img><p>Women's</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img2}></img><p>Men's</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img3}></img><p>Pets</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img4}></img><p>Toys</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img5}></img><p>Home</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img6}></img><p>Kitchen & Dining</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img7}></img><p>Kids</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img8}></img><p>Baby</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img9}></img><p>Sports & Outdoors</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img10}></img><p>Electronics</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img11}></img><p>Furniture</p></a></div>
+                <div className='categories-item'><a href='#'><img src={img12}></img><p>Patio & Garden</p></a></div>
+            </div>
         </div>
     )
 }

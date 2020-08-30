@@ -7,6 +7,10 @@ html, body {
   font-family: 'Nunito', sans-serif;
 }
 
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
 .App .header-row-1 {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -84,12 +88,15 @@ font-size:20px;
   background-color:#235AC6;
   padding:10px 0;
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   place-items:center;
   text-align:center;
-  margin-top:10px;
   border-bottom:4px solid #EE483B;
   position:relative;
+  margin: 0 auto;
+  margin-top:10px;
+  font-weight:bold;
+
 }
 
 .App header .header-row-3 .grid-container .grid-item{
@@ -97,8 +104,7 @@ font-size:20px;
   width:100%;
   display:grid;
   place-items:center;
-  font-weight:bold;
-  font-size:13px;
+  font-size:11px;
 }
 
 .App header .header-row-3 .grid-container .grid-item1{
@@ -127,6 +133,7 @@ position:relative;
 
  .App header .header-row-3 .grid-container .dropdown-wrapper * {
    color:#235AC6;
+   line-height: 20px;
  }
 
 .App header .header-row-3 .grid-container .grid-item1:hover .ddw1, .App header .header-row-3 .grid-container .grid-item2:hover .ddw2 {
@@ -461,26 +468,31 @@ margin-bottom:-6px;
 /* Carousel2 -------------------------------------------------------*/
 
 .App .carousel2-wrapper {
-  width:1300px;
+  width:1100px;
   margin:0 auto;
   margin-top:50px;
   overflow:hidden;
-  background:#F7F7F7;
+  position: relative;
+  background:white;
+  border-radius:10px;
+  padding-bottom: 30px;
+  padding-top:20px;
 }
 
 .App .carousel2-wrapper .carousel2-container {
-  background:white;
   overflow:hidden;
-  width:1200px;
+  width:1000px;
   position:relative;
   margin:0 auto;
-  border-radius:10px;
+  padding-bottom: 30px;
 }
 
 .App .carousel2-wrapper .carousel2-container .carousel2 {
   display:flex;
   transition: ease all 1s;
   margin:0 100px;
+  position:relative;
+  left:-100px;
 }
 
 .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item {
@@ -514,18 +526,18 @@ margin-bottom:-6px;
   text-align:left;
 }*/
 
-.App .carousel2-wrapper .carousel2-container .fas {
+.App .carousel2-wrapper .fas {
   color:blue;
   font-size:30px;
   position:absolute;
   top:45%;
   cursor: pointer;
-  left: 10px;
+  left: 20px;
 }
 
-.App .carousel2-wrapper .carousel2-container .fas.fa-chevron-circle-right {
+.App .carousel2-wrapper  .fas.fa-chevron-circle-right {
   left:auto;
-  right:10px;
+  right:20px;
 }
 
 
@@ -613,6 +625,20 @@ line-height:30px;
 
 /* Categories ------------------------------------------------------*/
 
+.App .categories-wrapper {
+  position: relative;
+  margin-top: 80px;
+}
+
+.App .categories-wrapper h1 {
+  font-size: 30px;
+  color: #004a9d;
+  margin:0;
+  position: absolute;
+  top: -50px;
+  left: 110px;
+}
+
 .App .categories-container {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -656,7 +682,7 @@ line-height:30px;
   top:0;
   left:-85px;
   position:absolute;
-  background: #F7F7F7;
+  background: #ebebeb;
 }
 
 .App .categories-container .categories-item:nth-child(10) a:hover {
@@ -667,7 +693,7 @@ line-height:30px;
   position: absolute;
   top: 25px;
   left: 0;
-  box-shadow:0 0 0 0; 
+  box-shadow:0 0 0 0;
 }
 
 
@@ -681,18 +707,25 @@ line-height:30px;
 .App .most-wanted-container {
     width: 1120px;
     background:white;
-    border-radius: 4px;
+    border-radius: 10px;
     margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding:20px;
     height:200px;
-    border: solid blue 1px;
+    border: solid rgb(207, 207, 207) 2px;
+    position: relative;
+    transition: ease 0.5s all;
 }
+
+.App .most-wanted-container:hover {
+  border: solid blue 2px;
+  
+}
+
 
 .App .most-wanted-container .pointy-container {
   display:grid;
-  border:solid red 1px;
   grid-template-columns: 3fr 1fr;
 }
 
@@ -716,40 +749,69 @@ line-height:30px;
 
 .App .most-wanted-container .mwcar-container {
   height:200px;
-  position:relative;
-  border: solid red 1px;
-  overflow: hidden;
+  width: 600px;
+  overflow:hidden;
+  margin-left:141px;
 }
 
-.App .most-wanted-container .mwcar-container button {
+.App .most-wanted-container .mwcar-container .mwcar-arrow-div {
+  cursor: pointer;
+  height: 100%;
   position:absolute;
-  top:50%;
-  right: 0;
+  top:0%;
+  right: 50px;
+  width:50px;
+  display: grid;
+  place-items:center;
 }
 
-.App .most-wanted-container .mwcar-container button:nth-child(2) {
-  left: 0;
+.App .most-wanted-container .mwcar-container .mwcar-arrow-div:nth-child(2) {
+  
+  left: 350px;
+}
+
+.App .most-wanted-container .mwcar-container .mwcar-arrow-div .fas {
+  transition: 0.3s ease all;
+  color: rgb(207, 207, 207);
+  font-size:30px;
+}
+
+.App .most-wanted-container:hover .mwcar-arrow-div .fas {
+  color: #0033C6;
+}
+
+.App .most-wanted-container .mwcar-container .slick-dots-container {
+  position:absolute;
+  display: flex;
+  right: 100px;
+  bottom: 10px;
+}
+
+.App .most-wanted-container .mwcar-container .slick-dots-container .dot-item {
+  height:10px;
+  width:10px;
+  cursor: pointer;
+  background:#f5f5f5;
+  border: solid rgb(139, 139, 139) 1px;
+  border-radius:50%;
+  margin-left:13px;
+  transition: ease all 0.3s;
 }
 
 .App .most-wanted-container .mwcar-container .mwcar-slider {
   height: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin-left: 120px;
   transition: 0.3s ease all;
+  width: 600px;
 }
 
-.App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item.invisible {
-  opacity: 0;
-}
 
 .App .most-wanted-container .mwcar-container .mwcar-slider .mwcar-item {
   display:grid;
   grid-template-columns: 1fr 3fr;
   place-items:center;
   width: 600px;
-  border: dotted red 1px;
-  opacity: 1;
   height: 200px;
 }
 
@@ -781,4 +843,357 @@ line-height:30px;
   font-weight: 800;
   margin-top: 0px;
   text-decoration: none;
+}
+
+/* Products (First Page) ----------------------------------------------------*/
+
+.App .products-container h1{
+  font-size: 30px;
+  color: #004a9d;
+  margin-left: 120px;
+
+}
+
+.App .products-container button{
+  background: #004a9d;
+  height: 50px;
+  width: 250px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.App .products-container button:focus {
+  outline: none;
+}
+
+.App .products-container .products-grid {
+  display: grid;
+  width: 1120px;
+  margin: 0 auto;
+  grid-template-columns: 280px 280px 280px 280px;
+  place-items: center;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.App .products-container .products-grid .product-item {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.App .products-container .products-grid .product-item img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-top: 25px;
+}
+
+.App .products-container .products-grid .product-item span {
+  font-size: 12px;
+  display: block;
+  color: #004a9d;
+}
+
+.App .products-container .products-grid .product-item span:nth-child(3) {
+  font-size: 16px;
+  text-decoration: line-through;
+  color: #666666;
+  margin-top: 25px;
+}
+
+.App .products-container .products-grid .product-item span:nth-child(4) {
+font-size: 23px;
+color: #004a9d;
+font-weight: bold;
+}
+
+/* Footer SubNewsLetter ---------------------------------------------------*/
+
+.App .footer-container .snl-wrapper {
+  background: #0033C6;
+}
+
+.App .footer-container .snl-container {
+  height:80px;
+  width:1360px;
+  background: #0033C6;
+  color:white;
+  display: grid;
+  font-weight: bold;
+  place-items:center;
+  margin: 0 auto;
+  grid-template-columns: 340px 340px 340px 340px;
+  grid-gap: 20px;
+}
+
+.App .footer-container .snl-container span {
+  font-size: 1.22em;
+}
+
+.App .footer-container .snl-container input {
+  width: 100%;
+  height:30px;
+  border-radius:3px;
+  border:0;
+  padding:0px 5px;
+}
+
+.App .footer-container .snl-container button {
+  justify-self: start;
+  width:200px;
+  height: 33px;
+  font-size: 1.125em;
+  background: #51A559;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Footer Contact ------------------------------------------------ */
+
+.App .footer-container .footer-contact-wrapper {
+  background: #EDEDED;
+  height: 80px;
+  border: solid #EDEDED 1px;
+  display: grid;
+  place-items: center;
+}
+
+.App .footer-container .footer-contact-wrapper .footer-contact-container {
+  display: grid;
+  grid-template-columns: 300px 400px 200px 200px;
+  place-items: center;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.App .footer-container .footer-contact-wrapper .footer-contact-container * {
+  margin:0;
+}
+
+.App .footer-container .footer-contact-wrapper .footer-contact-container h3 {
+  font-size: 12px;
+  color: #0033c6;
+}
+
+.App .footer-container .footer-contact-wrapper .footer-contact-container span {
+  font-size: 16px;
+  color: #283a87;
+  line-height: 38px;
+  font-weight: bold;
+}
+
+.App .footer-container .footer-contact-container .footer-whatsapp .whats-icon {
+  background: url('https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/ico-whats.svg') center center/cover no-repeat;
+  height:20px;
+  width: 20px;
+  display: inline-block;
+}
+
+/* Footer About --------------------------------------------- */
+
+.App .footer-container .footer-about-wrapper {
+  background: #f5f5f5;
+  border:solid #f5f5f5 1px;
+}
+
+.App .footer-container .footer-about-container {
+  display: grid;
+  grid-template-columns: 266px 266px 266px 266px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top:20px;
+  grid-gap:50px;
+  padding-bottom: 20px;
+  
+}
+
+.App .footer-container .footer-about-container div h3 {
+  font-size: 14px;
+  color: #0033c6;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.App .footer-container .footer-about-container div span {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #575757;
+}
+
+.App .footer-container .footer-about-container div ul {
+  margin:0;
+  margin-top: 5px;
+  padding:0;
+  font-size: 14px;
+  line-height: 25px;
+  color: #575757;
+  list-style-type: none;
+}
+
+/* Footer Last Row 1 ---------------------------------------------------------- */
+
+.App .footer-container .footer-lr1-container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 450px 900px;
+  width: 1350px;
+  place-items: center;
+}
+
+.App .footer-container .footer-lr1-container > * {
+  height: 100%;
+}
+
+.App .footer-container .footer-lr1-container div h3 {
+  font-size: 14px;
+  color: #555555;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 250px;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper {
+  height:40px;
+  width: 40px;
+  background:   #575757;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:first-child div {
+  background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-facebook.svg) no-repeat #575757 9px 6px;
+  width:30px;
+  height:30px;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(2) div {
+  background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-twitter.svg) no-repeat #575757 7px 8px;
+  width:30px;
+  height:30px;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(3) div {
+  background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-instagram.svg) no-repeat #575757 7px 6px;
+  width:30px;
+  height:30px;
+}
+
+.App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(4) div {
+  background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-youtube.svg) no-repeat #575757 7px 9px;
+  width:30px;
+  height:30px;
+}
+
+.App .footer-container .footer-lr1-container div:nth-child(2) .payment-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.App .footer-container .footer-lr1-container div:nth-child(2) .payment-container span {
+  display:block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.App .footer-container .footer-lr1-container div:nth-child(2) .payment-container  img {
+  margin-right: 10px;
+}
+
+/* Footer Last Row 2 ---------------------------------------------------------- */
+
+.App .footer-container .footer-lr2-wrapper {
+  margin-top: 50px;
+}
+
+.App .footer-container .footer-lr2-wrapper h3 {
+  margin-left:100px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+  margin-bottom: 0;
+}
+
+
+.App .footer-container .footer-lr2-wrapper .footer-lr2-container {
+  display: grid;
+  grid-template-columns: 125px 125px 125px 125px 125px 125px 125px 125px 125px 125px;
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.App .footer-container .footer-lr2-wrapper .footer-lr2-container ul {
+  list-style-type: none;
+}
+
+.App .footer-container .footer-lr2-wrapper .footer-lr2-container a {
+  color:#333333;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Footer Last Row 3 ------------------------------------------ */
+
+.App .footer-container .footer-lr3-container {
+  display: grid;
+  grid-template-columns: 900px 450px ;
+  width: 1350px;
+  margin: 0 auto;
+}
+
+.App .footer-container .footer-lr3-container h3 {
+  margin-left: 100px;
+  margin-bottom:0;
+  font-size: 14px;
+  color: #555555;
+}
+
+.App .footer-container .footer-lr3-container .lr3-glossary {
+  margin-top: 10px;
+  margin-left: 110px;
+}
+
+
+.App .footer-container .footer-lr3-container .lr3-glossary a {
+  border-left: solid black 1px;
+  font-size: 12px;
+  color: #333333;
+  margin: 0 5px;
+  padding-left:10px;
+  text-decoration: none;
+}
+
+.App .footer-container .footer-lr3-container .lr3-glossary a:first-child {
+  border: 0;
+  margin-left:0 ;
+  padding-left:0;
+}
+
+.App .footer-container .footer-lr3-container > div:nth-child(2) img {
+  margin-left: 110px;
+  margin-top:10px;  
+}
+
+.App .footer-container .footer-lr3-container > div:nth-child(2) img:nth-child(3) {
+  margin-left : 10px;
 }
