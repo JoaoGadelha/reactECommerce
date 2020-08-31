@@ -1,10 +1,10 @@
 import React from 'react'
-import SubsNewsLetter from './SubsNewsLetter'
-import FooterContact from './FooterContact'
-import FooterAbout from './FooterAbout'
-import FooterLastRow1 from './FooterLastRow1'
-import FooterLastRow2 from './FooterLastRow2'
-import FooterLastRow3 from './FooterLastRow3'
+import SubsNewsLetter from './SubsNewsLetter/SubsNewsLetter'
+import FooterContact from './FooterContact/FooterContact'
+import FooterAbout from './FooterAbout/FooterAbout'
+import FooterLastRow1 from './FooterLastRow1/FooterLastRow1'
+import FooterLastRow2 from './FooterLastRow2/FooterLastRow2'
+import FooterLastRow3 from './FooterLastRow3/FooterLastRow3'
 
 
 const Footer = () => {

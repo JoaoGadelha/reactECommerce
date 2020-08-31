@@ -1,0 +1,7 @@
+.App .header-row-1 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items:end;
+    right:5%;   
+  }
+  
