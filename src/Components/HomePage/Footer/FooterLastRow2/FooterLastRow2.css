@@ -1,0 +1,36 @@
+.App .footer-container .footer-lr2-wrapper {
+    margin-top: 50px;
+  }
+  
+  .App .footer-container .footer-lr2-wrapper h3 {
+    margin-left:100px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 0;
+  }
+  
+  
+  .App .footer-container .footer-lr2-wrapper .footer-lr2-container {
+    display: grid;
+    grid-template-columns: 125px 125px 125px 125px 125px 125px 125px 125px 125px 125px;
+    width: 1250px;
+    margin: 0 auto;
+  }
+  
+  .App .footer-container .footer-lr2-wrapper .footer-lr2-container ul {
+    list-style-type: none;
+  }
+  
+  .App .footer-container .footer-lr2-wrapper .footer-lr2-container a {
+    color:#333333;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .App .footer-container .footer-lr2-wrapper .footer-lr2-container {
+      grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    width: 600px;
+    }
+  }

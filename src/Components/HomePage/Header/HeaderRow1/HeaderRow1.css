@@ -1,0 +1,14 @@
+.App .header-row-1 {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+  }
+
+  @media (max-width: 768px) {
+    
+    .App .header-row-1 {
+      grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+    }
+
+  }
+  

@@ -1,0 +1,25 @@
+.header {
+    height: 300px;
+    border-top: solid blue 5px;
+    position: relative;
+}
+
+.header::before {
+    border: solid red 2px;
+    content: '';
+    width:100vw;
+    position: absolute;
+}
+
+.header .imgContainer {
+    display:grid;
+    grid-template-columns: 50px auto;
+    place-items: center;
+    width:100px;
+    margin-top: 20px;
+}
+
+.header .logo {
+    width:200px;
+    height: auto;
+}

@@ -1,0 +1,80 @@
+
+.App .footer-container .footer-lr1-container {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 450px 900px;
+    width: 1350px;
+    place-items: center;
+  }
+  
+  .App .footer-container .footer-lr1-container > * {
+    height: 100%;
+  }
+  
+  .App .footer-container .footer-lr1-container div h3 {
+    font-size: 14px;
+    color: #555555;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 250px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper {
+    height:40px;
+    width: 40px;
+    background:   #575757;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:first-child div {
+    background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-facebook.svg) no-repeat #575757 9px 6px;
+    width:30px;
+    height:30px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(2) div {
+    background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-twitter.svg) no-repeat #575757 7px 8px;
+    width:30px;
+    height:30px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(3) div {
+    background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-instagram.svg) no-repeat #575757 7px 6px;
+    width:30px;
+    height:30px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:first-child .logo-container .logo-wrapper:nth-child(4) div {
+    background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-youtube.svg) no-repeat #575757 7px 9px;
+    width:30px;
+    height:30px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:nth-child(2) .payment-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+  
+  .App .footer-container .footer-lr1-container div:nth-child(2) .payment-container span {
+    display:block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 5px;
+  }
+  
+  .App .footer-container .footer-lr1-container div:nth-child(2) .payment-container  img {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .App .footer-container .footer-lr1-container {
+      grid-template-columns: 200px 400px;
+      width: 600px;
+    }
+  }

@@ -1,8 +1,11 @@
+
+
 html, body {
   margin:0;
   padding:0;
   box-sizing:border-box;
   height:100%;
+  width: 100%;
   background-color:#F7F7F7;
   font-family: 'Nunito', sans-serif;
 }
@@ -10,4 +13,3 @@ html, body {
 * {
   font-family: 'Nunito', sans-serif;
 }
-

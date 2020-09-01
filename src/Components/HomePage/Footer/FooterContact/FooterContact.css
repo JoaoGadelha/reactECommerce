@@ -1,0 +1,48 @@
+.App .footer-container .footer-contact-wrapper {
+    background: #EDEDED;
+    height: 80px;
+    border: solid #EDEDED 1px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .App .footer-container .footer-contact-wrapper .footer-contact-container {
+    display: grid;
+    grid-template-columns: 300px 400px 200px 200px;
+    place-items: center;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .App .footer-container .footer-contact-wrapper .footer-contact-container * {
+    margin:0;
+  }
+  
+  .App .footer-container .footer-contact-wrapper .footer-contact-container h3 {
+    font-size: 12px;
+    color: #0033c6;
+  }
+  
+  .App .footer-container .footer-contact-wrapper .footer-contact-container span {
+    font-size: 16px;
+    color: #283a87;
+    line-height: 38px;
+    font-weight: bold;
+  }
+  
+  .App .footer-container .footer-contact-container .footer-whatsapp .whats-icon {
+    background: url('https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/ico-whats.svg') center center/cover no-repeat;
+    height:20px;
+    width: 20px;
+    display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+
+    .App .footer-container {
+      display: none;
+    }
+    .App .footer-container .footer-contact-wrapper .footer-contact-container {
+      grid-template-columns: 150px 150px 150px 150px;
+    }
+  }
