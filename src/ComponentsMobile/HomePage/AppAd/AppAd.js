@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './AppAd.css'
 
-const AppAd    = () => {
+const AppAd  = () => {
 
     let [visibleAd, setVisibleAd] = useState(true);
 
@@ -15,7 +15,7 @@ const AppAd    = () => {
                     <span>Download now our new app and enjoy exclusive promotions!</span>
                     <button>Download <span>our app</span></button>
                 </div>
-                <img src='https://m.casasbahia.com.br/assets/images/icon-fechar.svg' onClick={closeAppAd}></img>
+                <img src='https://m.casasbahia.com.br/assets/images/icon-fechar.svg' onClick={closeAppAd} className='closingX'></img>
             </div>}</>
     )
 
