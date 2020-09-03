@@ -75,14 +75,3 @@
     position: relative;
     top:175px;
   }
-
-  @media (max-width: 768px) {
-
-    .App .categories-container {
-      width: 600px;
-    }
-
-    .App .categories-container .categories-item {
-      max-width: 100px;
-    }
-  }

@@ -20,7 +20,6 @@ const MobileCarousel = () => {
             carRef.current.style.transition = 'ease all 0.3s';
             if (counter <= 3) {
                 counter += 1;
-                console.log(counter);
                 walkCarousel();
             }
 
@@ -36,8 +35,8 @@ const MobileCarousel = () => {
     }
 
     const walkCarousel = () => {
-        carRef.current.style.transform = 'translateX(' + -counter * (carRef.current.children[0].offsetWidth) + 'px)';
         updateDot();
+        carRef.current.style.transform = 'translateX(' + -counter * (carRef.current.children[0].offsetWidth) + 'px)';
     }
 
     const updateDot = () => {
