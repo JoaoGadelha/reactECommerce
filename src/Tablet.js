@@ -9,6 +9,8 @@ import Promotion1 from './ComponentsMobile/HomePage/Promotion1/Promotion1'
 import Carousel2 from './ComponentsMobile/HomePage/Carousels/Carousel2/Carousel2'
 import Categories from './ComponentsMobile/HomePage/Categories/Categories'
 import MWCar from './ComponentsMobile/HomePage/Carousels/MostWanted/MostWanted'
+import Products from './ComponentsMobile/HomePage/FirstPageProducts/Products'
+import Footer from './ComponentsMobile/HomePage/Footer/Footer'
 
 
 function Tablet() {
@@ -24,6 +26,8 @@ function Tablet() {
           <Carousel2 />  
           <Categories />
           <MWCar />
+          <Products />
+          <Footer />
         </div>
     );
 }
