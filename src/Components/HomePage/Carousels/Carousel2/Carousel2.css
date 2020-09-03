@@ -154,15 +154,4 @@
     color:black;
     margin:0;
   }
-
-  @media (max-width: 768px) {
-    
-    .App .carousel2-wrapper {
-      width: 600px;
-    }
-
-    .App .carousel2-wrapper .carousel2-container {
-      width: 600px;
-    }
-
-  }
+  

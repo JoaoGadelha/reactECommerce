@@ -67,12 +67,3 @@
   color: #004a9d;
   font-weight: bold;
   }
-
-  @media (max-width: 768px) {
-
-    .App .products-container .products-grid {
-      width: 600px;
-      grid-template-columns: 200px 200px 200px;
-    }
-
-  }

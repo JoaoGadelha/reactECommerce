@@ -18,17 +18,16 @@ const MobileCarousel = () => {
         ref1.current.style.background = 'red';
         timer = setInterval(() => {
             carRef.current.style.transition = 'ease all 0.3s';
-            if (counter <= 3) {
+            if (counter < 3) {
                 counter += 1;
                 walkCarousel();
-            }
-
-        }, 2000)
+            } 
+        }, 1998)
     }, []);
 
     const onTransEnd = () => {
         carRef.current.style.transition = 'none';
-        if (counter === 3) {
+        if (counter >= 3) {
             counter = 0;
             walkCarousel();
         }

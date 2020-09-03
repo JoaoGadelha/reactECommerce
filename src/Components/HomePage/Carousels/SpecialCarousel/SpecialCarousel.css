@@ -139,26 +139,3 @@
   }
   
 
-
-@media (max-width: 768px) {
-  .App .special-carousel-wrapper {
-    display: none;
-    width: 640px;
-    border: solid red 10px;
-  }
-
-
-  .App .special-carousel-container {
-    height:calc(388px);
-    width:calc(640px);
-    margin:0 auto;
-    overflow: hidden;
-    position:relative;
-    margin-top:50px;
-    border: dotted red 10px;
-  }
-
-  .App .special-carousel-container .special-carousel img {
-    width: 640px;
-  }
-}

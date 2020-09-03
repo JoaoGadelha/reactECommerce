@@ -1,11 +1,11 @@
 
 .App .carousel2-wrapper-mobile {
-    width:768px;
+    width:700px;
     margin:0 auto;
     margin-top:50px;
     overflow:hidden;
     position: relative;
-    background:white;
+    background: white;
     border-radius:10px;
   }
   
@@ -14,13 +14,14 @@
     position:relative;
     margin:0 auto;
     padding-bottom: 30px;
+    width: 600px;
   }
   
   .App .carousel2-wrapper-mobile .carousel2-container .carousel2 {
-    display:flex;
-    transition: ease all 1s;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    transition: ease all 0.3s;
     position:relative;
-    margin-left: 150px;
   }
   
   .App .carousel2-wrapper-mobile .carousel2-container .carousel2 .carousel2-item {
@@ -28,6 +29,10 @@
     opacity:0;
     width:300px;
     max-height:480px;
+  }
+
+  .App .carousel2-wrapper-mobile .carousel2-container .carousel2 .carousel2-item img {
+    width: 250px;
   }
   
   .App .carousel2-wrapper-mobile .carousel2-container .carousel2 .carousel2-item.visible {
@@ -52,7 +57,7 @@
     color:blue;
     font-size:30px;
     position:absolute;
-    top:45%;
+    top:55%;
     cursor: pointer;
     left: 20px;
   }

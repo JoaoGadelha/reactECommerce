@@ -36,13 +36,3 @@
     width: 20px;
     display: inline-block;
   }
-
-  @media (max-width: 768px) {
-
-    .App .footer-container {
-      display: none;
-    }
-    .App .footer-container .footer-contact-wrapper .footer-contact-container {
-      grid-template-columns: 150px 150px 150px 150px;
-    }
-  }

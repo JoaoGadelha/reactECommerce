@@ -14,23 +14,3 @@
       margin:0 auto;
       display:block;
     }
-
-/*
-@media (max-width: 768px) {
-
-  .mainContainer {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 425px) {
-  .mainContainer {
-    display:block;
-  }
-
-  .mainContainer > * {
-    margin-bottom:20px;
-  }
-}
-
-*/

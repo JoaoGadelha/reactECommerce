@@ -140,10 +140,3 @@
   margin-top: 0px;
   text-decoration: none;
 }
-
-@media (max-width: 768px) {
-  .App .most-wanted-container {
-    width: 600px;
-    display: none;
-  }
-}

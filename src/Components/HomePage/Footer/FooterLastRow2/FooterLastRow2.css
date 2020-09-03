@@ -27,10 +27,3 @@
     text-decoration: none;
     font-size: 12px;
   }
-
-  @media (max-width: 768px) {
-    .App .footer-container .footer-lr2-wrapper .footer-lr2-container {
-      grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
-    width: 600px;
-    }
-  }
