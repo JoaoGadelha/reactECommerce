@@ -5,7 +5,7 @@
     .App .banner1 .banner1-wrapper {
       width:100%;
       display:inline-block;
-      background: linear-gradient(90deg, rgba(231,68,47,1) 0%, rgba(231,68,47,1) 27%, rgba(116,30,19,1) 69%, rgba(116,30,19,1) 100%);
+      background: linear-gradient(90deg, rgb(177, 20, 24) 0%, rgb(177, 20, 24) 27%, rgb(93, 0, 0) 69%, rgb(93, 0, 0) 100%);
       }
     
     .App .banner1 .banner1-wrapper .banner1-img {
