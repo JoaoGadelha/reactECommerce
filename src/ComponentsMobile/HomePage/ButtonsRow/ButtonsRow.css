@@ -1,0 +1,41 @@
+.buttons-row {
+    background: #EBEBEB;
+    width: 100%;
+    max-width: 768px;
+}
+
+.buttons-row .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-gap: 20px;
+    margin: 0 auto;
+    width: 95%;
+    padding:20px 0;
+    place-items: center;
+}
+
+.grid > * {
+    height: 150px;
+    border-radius: 10px;
+    width: 100%;
+    background: white;
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    text-align: center;
+    border-bottom: 10px solid #2D5BC9;
+}
+
+.grid > * > i {
+    font-size: 50px;
+    color: #2D5BC9;
+    margin-top: 10px;
+}
+
+.grid > * > span {
+    margin: 0 20px;
+    margin-bottom: 13px;
+    font-size: 20px;
+    color: #2d5bc9;
+    font-weight: bold;
+}
