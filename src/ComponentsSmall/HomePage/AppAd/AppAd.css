@@ -1,0 +1,60 @@
+
+.app-ad-small {
+    background: white;
+    height: 100px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-items: center;
+    position: fixed;
+    z-index: 200;
+  }
+  
+  .app-ad-small div {
+    grid-column: 2;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 3fr 1fr;
+  }
+  
+  .app-ad-small img {
+    height: 10px;
+    width: 10px;
+    justify-self: end;
+    margin-right:30px;
+    cursor: pointer;
+  }
+  
+  .app-ad-small span {
+    font-size:17px;
+    color: #575757;
+  }
+  
+  .app-ad-small button {
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #51A559;
+    color: white;
+    border: 0;
+    padding-top: 5px;
+    padding-bottom: 45px;
+    display:table-cell;
+    vertical-align: middle;
+    border-radius: 7px;
+    font-weight: bold;
+    border: solid #3c7942 3px;
+  font-size: 14px;
+    cursor: pointer;
+    max-width: 105px;
+  }
+  
+  .app-ad-small button:focus {
+    outline: none;
+  }
+  
+  .app-ad-small button span {
+    color: white;
+    padding-bottom:20px;
+    font-size: 13px;
+  }

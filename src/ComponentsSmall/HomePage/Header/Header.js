@@ -16,7 +16,7 @@ const Header = () => {
 
 
     return (
-        <div className='header'>
+        <div className='header-small'>
                 <SideMenu inputRef={sideMenuRef} />
             <div className='imgContainer'>
                 <div>
