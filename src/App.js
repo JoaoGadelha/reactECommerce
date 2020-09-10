@@ -26,7 +26,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" >
       {isDesktopOrLaptop && <Desktop />}
       {isTablet && <Tablet />}
       {isPhone && <Phone />}

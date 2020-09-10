@@ -1,24 +1,23 @@
 .header {
-    width: 768px;
+    width: 100%;
     border-top: solid blue 5px;
     position: relative;
     background: #f7f7f7;
     margin-bottom: 20px;
-    max-width: 768px;
 }
 
 .header::before {
     border: solid red 2px;
     content: '';
-    width: 764px;
+    width: 100%;
     position: absolute;
 }
 
 .header .imgContainer {
-    display:grid;
+    display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     place-items: center;
-    width:100%;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -30,6 +29,8 @@
 
 .header .imgContainer div:first-child img:first-child {
     justify-self: end;
+    height: 30px;
+    margin-left: 50px;
 }
 
 .header .imgContainer div:nth-child(2) {
@@ -40,12 +41,17 @@
     place-items: center;
 }
 
+.header .imgContainer div:nth-child(2) img:nth-child(1) {
+    height: 40px;
+}
+
 .header .imgContainer div:nth-child(2) img:nth-child(2) {
     justify-self: start;
+    height: 40px;
 }
 
 .header .imgContainer div .logo {
-    width:100%;
+    width: 100%;
     height: auto;
 }
 
@@ -54,8 +60,9 @@
     display: block;
     margin-top: 10px;
     width: 90%;
-    height: 45px;
-    border:solid #d9d9d9 1px;
+    height: 50px;
+    font-size: 20px;
+    border: solid #d9d9d9 1px;
     border-radius: 5px;
     padding-left: 20px;
 }
@@ -69,8 +76,8 @@
     height: auto;
     width: 600px;
     position: absolute;
-    top:0;
-    left:-100%;
+    top: 0;
+    left: -100%;
     transition: ease all 0.3s;
     z-index: 1000;
     border-radius: 0px 5px 5px 0;

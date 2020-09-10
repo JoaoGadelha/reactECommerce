@@ -1,24 +1,26 @@
 .mobile-carousel-wrapper {
     position: relative;
+    width: 100%;
 }
 
-.mobile-carousel  {
-                background: #EBEBEB;
-position: relative;
-max-width: 768px;
-overflow: hidden;
-            }
+.mobile-carousel {
+    background: #EBEBEB;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
 
 .mobile-carousel .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     transition: ease all 0.3s;
+    width: 500%;
 }
 
 .mobile-carousel-wrapper .center-slick-dots {
-    position:absolute;
-    left:50%;
-    width:200px;
+    position: absolute;
+    left: 50%;
+    width: 200px;
     height: 10px;
     bottom: -20px;
 }

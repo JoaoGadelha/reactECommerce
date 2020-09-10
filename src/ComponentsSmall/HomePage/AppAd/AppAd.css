@@ -2,7 +2,7 @@
 .app-ad-small {
     background: white;
     height: 100px;
-    width: 300px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     place-items: center;
