@@ -1,12 +1,12 @@
 
-.App .products-container-mobile h1{
+.App .products-container-small h1{
     font-size: 30px;
     color: #004a9d;
     margin-left: 120px;
     margin-bottom: 10px;
   }
   
-  .App .products-container-mobile button{
+  .App .products-container-small button{
     background: #004a9d;
     height: 50px;
     width: 250px;
@@ -19,14 +19,14 @@
     font-weight: bold;
   }
   
-  .App .products-container-mobile button:focus {
+  .App .products-container-small button:focus {
     outline: none;
   }
   
-  .App .products-container-mobile {
+  .App .products-container-small {
   }
 
-  .App .products-container-mobile .products-grid {
+  .App .products-container-small .products-grid {
     padding:20px;
     display: grid;
     width: 700px;
@@ -38,14 +38,14 @@
     margin-bottom: 20px;
   }
   
-  .App .products-container-mobile .products-grid .product-item {
+  .App .products-container-small .products-grid .product-item {
     height: 300px;
     width: 200px;
     border-radius: 10px;
     margin-bottom: 20px;
   }
   
-  .App .products-container-mobile .products-grid .product-item img {
+  .App .products-container-small .products-grid .product-item img {
     width: 150px;
     height: auto;
     margin: 0 auto;
@@ -53,20 +53,20 @@
     margin-top: 25px;
   }
   
-  .App .products-container-mobile .products-grid .product-item span {
+  .App .products-container-small .products-grid .product-item span {
     font-size: 12px;
     display: block;
     color: #004a9d;
   }
   
-  .App .products-container-mobile .products-grid .product-item span:nth-child(3) {
+  .App .products-container-small .products-grid .product-item span:nth-child(3) {
     font-size: 16px;
     text-decoration: line-through;
     color: #666666;
     margin-top: 25px;
   }
   
-  .App .products-container-mobile .products-grid .product-item span:nth-child(4) {
+  .App .products-container-small .products-grid .product-item span:nth-child(4) {
   font-size: 23px;
   color: #004a9d;
   font-weight: bold;

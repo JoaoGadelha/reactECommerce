@@ -86,7 +86,7 @@ const Products = () => {
     }
 
     return (
-        <div className='products-container-mobile'>
+        <div className='products-container-small'>
             <h1>New Products for You</h1>
             <div className='products-grid'>
                 <ProductItem img={img11} title={'TV 65 Polegadas LG LED Smart Wifi 4k Usb HDMI Comando Voz 65um7470psa.awz'} oldPrice = {'$ 1349.90'} price={'$ 1199.90'} />

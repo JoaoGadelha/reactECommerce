@@ -65,14 +65,14 @@ const MWCar = () => {
     return (
         <div className='mwcar-container'>
             <div className='mwcar-slider'>
-                <MWCarItem img={i1} title={limitedTitleArray[0]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i2} title={limitedTitleArray[1]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i3} title={limitedTitleArray[2]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i4} title={limitedTitleArray[3]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i5} title={limitedTitleArray[4]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i6} title={limitedTitleArray[5]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i7} title={limitedTitleArray[6]} oldPrice='$ 999.00' price='$ 849.00' />
-                <MWCarItem img={i8} title={limitedTitleArray[7]} oldPrice='$ 999.00' price='$ 849.00' />
+                <MWCarItem img={i1} title={limitedTitleArray[0]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i2} title={limitedTitleArray[1]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i3} title={limitedTitleArray[2]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i4} title={limitedTitleArray[3]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i5} title={limitedTitleArray[4]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i6} title={limitedTitleArray[5]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i7} title={limitedTitleArray[6]} oldPrice='$ 999.00' price='$849.00' />
+                <MWCarItem img={i8} title={limitedTitleArray[7]} oldPrice='$ 999.00' price='$849.00' />
 
             </div>
             <div className='mwcar-arrow-div' onClick={prevFun}><i className="fas fa-chevron-circle-left" ></i></div>
