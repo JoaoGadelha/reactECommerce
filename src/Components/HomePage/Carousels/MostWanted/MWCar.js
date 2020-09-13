@@ -48,6 +48,10 @@ const MWCar = () => {
     }
 
     const updateArrows = () => {
+        prevRef.current.style.opacity = '1';
+        nextRef.current.style.opacity = '1';
+        nextRef.current.style.cursor = 'pointer';
+        prevRef.current.style.cursor = 'pointer';
         if (counter === 0) {
             prevRef.current.style.opacity = '0';
             nextRef.current.style.opacity = '1';

@@ -15,10 +15,10 @@
   
   .App .categories-wrapper-mobile .categories-container {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     width:100%;
-    background:white;
+    background:red;
     margin-top:50px;
     border-radius:20px;
     padding:40px 20px;

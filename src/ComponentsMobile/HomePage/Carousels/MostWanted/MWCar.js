@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import MWCarItem from './MWCarItem'
 import i1 from './imgMWCar/img1'
 import i2 from './imgMWCar/img2'
@@ -16,15 +16,18 @@ const MWCar = () => {
     let walkDist;
     let mwcarItem;
     let counter;
-    let limitedTitleArray = ['Television Samsung','Television Philco','LCD Television','Washing Machine','Fridge LG','Oven LG','Electric Oven Philips','Washing Machine'];
+    let limitedTitleArray = ['Television Samsung', 'Television Philco', 'LCD Television', 'Washing Machine', 'Fridge LG', 'Oven LG', 'Electric Oven Philips', 'Washing Machine'];
+    let prevRef = useRef(null);
+    let nextRef = useRef(null);
 
     useEffect(() => {
         counter = 0;
         mwcarItem = document.getElementsByClassName('mwcar-item invisible');
+        updateArrows();
         updateDot();
     }, []);
 
-   
+
 
 
     const nextFun = () => {
@@ -44,6 +47,25 @@ const MWCar = () => {
         }
     }
 
+    const updateArrows = () => {
+        prevRef.current.style.opacity = '1';
+        nextRef.current.style.opacity = '1';
+        nextRef.current.style.cursor = 'pointer';
+        prevRef.current.style.cursor = 'pointer';
+        if (counter === 0) {
+            prevRef.current.style.opacity = '0';
+            nextRef.current.style.opacity = '1';
+            prevRef.current.style.cursor = 'unset';
+            nextRef.current.style.cursor = 'pointer';
+        } else
+            if (counter === 7) {
+                nextRef.current.style.opacity = '0';
+                prevRef.current.style.opacity = '1';
+                nextRef.current.style.cursor = 'unset';
+                prevRef.current.style.cursor = 'pointer';
+            }
+    }
+
     const updateDot = () => {
         dotArray = document.getElementsByClassName('dot-item');
         for (let i = 0; i < dotArray.length; i++) {
@@ -58,6 +80,7 @@ const MWCar = () => {
     const walkCar = () => {
         mwcar = document.getElementsByClassName('mwcar-slider');
         mwcar[0].style.transform = 'translateX(' + -counter * document.getElementsByClassName('mwcar-item')[0].offsetWidth + 'px)';
+        updateArrows();
         updateDot();
     }
 
@@ -75,8 +98,8 @@ const MWCar = () => {
                 <MWCarItem img={i8} title={limitedTitleArray[7]} oldPrice='$ 999.00' price='$849.00' />
 
             </div>
-            <div className='mwcar-arrow-div' onClick={prevFun}><i className="fas fa-chevron-circle-left" ></i></div>
-            <div className='mwcar-arrow-div' onClick={nextFun}><i className="fas fa-chevron-circle-right" ></i></div>
+            <div className='mwcar-arrow-div' onClick={prevFun} ref={prevRef}><i className="fas fa-chevron-circle-left" ></i></div>
+            <div className='mwcar-arrow-div' onClick={nextFun} ref={nextRef}><i className="fas fa-chevron-circle-right" ></i></div>
             <div className='slick-dots-container' >
                 <div className='dot-item' onClick={() => { counter = 0; walkCar(); }}></div>
                 <div className='dot-item' onClick={() => { counter = 1; walkCar(); }}></div>

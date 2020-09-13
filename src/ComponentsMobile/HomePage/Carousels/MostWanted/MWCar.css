@@ -4,11 +4,11 @@
   border-radius: 10px;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: 400px;
+  grid-template-columns: 1fr 2fr;
   border: solid rgb(207, 207, 207) 2px;
   position: relative;
   transition: ease 0.5s all;
+  padding-bottom: 40px;
 }
 
 .App .most-wanted-container-mobile:hover {
@@ -17,33 +17,40 @@
 
 .App .most-wanted-container-mobile .pointy-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  margin-left: 10px;
 }
 
 .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-  height: 200px;
+  height: 100%;
   background: #F6F6F6;
   display: grid;
   place-items: center;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   text-align: left;
   padding-left: 10px;
   color: #0033C6;
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+  margin-top: 0px;
+  margin-left: 25px;
 }
 
 .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
   width: 0;
   height: 0;
-  border-left: solid #F6F6F6 50px;
-  border-top: solid transparent 100px;
-  border-bottom: solid transparent 100px;
+  border-left: solid #F6F6F6 100px;
+  border-top: solid transparent 270px;
+  border-bottom: solid transparent 270px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container {
-  width: 750px;
-  margin-left: 70px;
+  width: 400px;
+  margin: 0 auto;
   overflow: hidden;
+  
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
@@ -51,20 +58,20 @@
   height: 100%;
   position: absolute;
   top: 0%;
-  right: 0px;
+  right: 30px;
   width: 50px;
   display: grid;
   place-items: center;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-  left: 200px;
+  left: 430px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
   transition: 0.3s ease all;
   color: rgb(207, 207, 207);
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
@@ -75,33 +82,32 @@
   position: absolute;
   display: flex;
   right: 100px;
-  bottom: 10px;
+  bottom: 20px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   background: #f5f5f5;
   border: solid rgb(139, 139, 139) 1px;
   border-radius: 50%;
-  margin-left: 13px;
+  margin-left: 20px;
   transition: ease all 0.3s;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-  height: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   transition: 0.3s ease all;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-  display: grid;
-  grid-template-columns: 400px 350px;
+  display: block;
   place-items: center;
   position: relative;
-  width: 750px;
+  width: 600px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
@@ -109,13 +115,14 @@
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-  margin-left: 0px;
+  margin-left: 50px;
   width: 350px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
   font-size: 35px;
-  color: #575757
+  color: #575757;
+  word-wrap:break-word;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
@@ -134,234 +141,128 @@
   text-decoration: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .App .most-wanted-container-mobile {
     width: 100%;
     background: white;
     border-radius: 10px;
     margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    height: 400px;
+    display: block;
     border: solid rgb(207, 207, 207) 2px;
     position: relative;
     transition: ease 0.5s all;
+    padding-bottom: 100px;
   }
+  
   .App .most-wanted-container-mobile:hover {
     border: solid blue 2px;
   }
+  
   .App .most-wanted-container-mobile .pointy-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-  .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-    height: 100%;
-    background: #F6F6F6;
-    display: grid;
-    place-items: center;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: left;
-    padding-left: 10px;
-    color: #0033C6;
-  }
-  .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
-    width: 0;
-    height: 0;
-    border-left: solid #F6F6F6 50px;
-    border-top: solid transparent 200px;
-    border-bottom: solid transparent 200px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container {
-    width: 600px;
-    margin-left: 70px;
-    overflow: hidden;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
-    cursor: pointer;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    right: 0px;
-    width: 50px;
-    display: grid;
-    place-items: center;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-    left: 250px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
-    transition: 0.3s ease all;
-    color: rgb(207, 207, 207);
-    font-size: 40px;
-  }
-  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
-    color: #0033C6;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
-    position: absolute;
-    display: flex;
-    right: 100px;
-    bottom: 10px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 10px;
-    width: 10px;
-    cursor: pointer;
-    background: #f5f5f5;
-    border: solid rgb(139, 139, 139) 1px;
-    border-radius: 50%;
-    margin-left: 13px;
-    transition: ease all 0.3s;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 0.3s ease all;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-    display: grid;
-    grid-template-columns: 300px 300px;
-    place-items: center;
-    position: relative;
-    width: 600px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 300px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    margin-left: 0px;
-    width: 300px;
-    margin: 0 auto;
-    display: block;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-    font-size: 30px;
-    color: #575757
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
-    font-size: 20px;
-    margin: 0;
-    margin-top: 10px;
-    color: #707070;
-    text-decoration: line-through;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
-    font-size: 30px;
-    color: #0033C6;
-    font-weight: 800;
-    margin-top: 0px;
-    text-decoration: none;
-  }
-}
 
-@media (max-width:890px) {
-  .App .most-wanted-container-mobile {
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    border: solid rgb(207, 207, 207) 2px;
-    position: relative;
-    transition: ease 0.5s all;
+    padding:0;
+    margin: 0 ;
+    display: block;
   }
-  .App .most-wanted-container-mobile:hover {
-    border: solid blue 2px;
-  }
-  .App .most-wanted-container-mobile .pointy-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
+  
   .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
     height: 100%;
     background: #F6F6F6;
-    display: grid;
-    place-items: center;
     font-weight: bold;
-    font-size: 30px;
-    text-align: left;
-    padding-left: 10px;
+    font-size: 40px;
     color: #0033C6;
+    padding:20px 0;
+    margin: 0 ;
   }
+  
   .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
+    display: none;
     width: 0;
     height: 0;
-    border-left: solid #F6F6F6 50px;
-    border-top: solid transparent 200px;
-    border-bottom: solid transparent 200px;
+    border-left: solid #F6F6F6 100px;
+    border-top: solid transparent 270px;
+    border-bottom: solid transparent 270px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container {
-    width: 550px;
-    margin-left: 50px;
+    width: 400px;
+    margin: 0 auto;
     overflow: hidden;
+    
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
     cursor: pointer;
     height: 100%;
     position: absolute;
     top: 0%;
-    right: 0px;
+    right: 30px;
     width: 50px;
     display: grid;
     place-items: center;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-    left: 220px;
+    left: 30px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
     transition: 0.3s ease all;
     color: rgb(207, 207, 207);
-    font-size: 40px;
+    font-size: 50px;
   }
+  
   .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
     color: #0033C6;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
     position: absolute;
     display: flex;
     right: 100px;
-    bottom: 10px;
+    bottom: 20px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
     background: #f5f5f5;
     border: solid rgb(139, 139, 139) 1px;
     border-radius: 50%;
-    margin-left: 13px;
+    margin-left: 20px;
     transition: ease all 0.3s;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     transition: 0.3s ease all;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
+    display: block;
     place-items: center;
     position: relative;
     width: 600px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 300px;
-    margin: 0 auto;
-    display: block;
+    width: 400px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    margin-left: 30px;
-    width: 300px;
-    display: block;
+    margin-left: 50px;
+    width: 350px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
     font-size: 35px;
     color: #575757;
-    width: 50px;
-    display: block;
+    word-wrap:break-word;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
     font-size: 20px;
     margin: 0;
@@ -369,6 +270,7 @@
     color: #707070;
     text-decoration: line-through;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
     font-size: 30px;
     color: #0033C6;
@@ -376,240 +278,131 @@
     margin-top: 0px;
     text-decoration: none;
   }
+
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .App .most-wanted-container-mobile {
     width: 100%;
     background: white;
     border-radius: 10px;
     margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: block;
     border: solid rgb(207, 207, 207) 2px;
     position: relative;
     transition: ease 0.5s all;
+    padding-bottom: 100px;
   }
+  
   .App .most-wanted-container-mobile:hover {
     border: solid blue 2px;
   }
+  
   .App .most-wanted-container-mobile .pointy-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+
+    padding:0;
+    margin: 0 ;
+    display: block;
   }
+  
   .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
     height: 100%;
     background: #F6F6F6;
-    display: grid;
-    place-items: center;
     font-weight: bold;
-    font-size: 30px;
-    text-align: left;
-    padding-left: 10px;
+    font-size: 40px;
     color: #0033C6;
+    padding:20px 0;
+    margin: 0 ;
   }
+  
   .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
+    display: none;
     width: 0;
     height: 0;
-    border-left: solid #F6F6F6 50px;
-    border-top: solid transparent 200px;
-    border-bottom: solid transparent 200px;
+    border-left: solid #F6F6F6 100px;
+    border-top: solid transparent 270px;
+    border-bottom: solid transparent 270px;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container {
-    width: 500px;
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    top: 45%;
+    right: 30px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
+    left: 30px;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
+    transition: 0.3s ease all;
+    color: rgb(207, 207, 207);
+    font-size: 50px;
+  }
+  
+  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
+    color: #0033C6;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
+    position: absolute;
+    display: flex;
+    right: 22%;
+    bottom: 20px;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background: #f5f5f5;
+    border: solid rgb(139, 139, 139) 1px;
+    border-radius: 50%;
+    margin-left: 20px;
+    transition: ease all 0.3s;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    transition: 0.3s ease all;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
+    display: block;
+    place-items: center;
+    position: relative;
+    width: 600px;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
+    width: 400px;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
     margin-left: 50px;
-    overflow: hidden;
+    width: 350px;
   }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
-    cursor: pointer;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    right: 0px;
-    width: 50px;
-    display: grid;
-    place-items: center;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-    left: 220px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
-    transition: 0.3s ease all;
-    color: rgb(207, 207, 207);
-    font-size: 40px;
-  }
-  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
-    color: #0033C6;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
-    position: absolute;
-    display: flex;
-    right: 100px;
-    bottom: 10px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 10px;
-    width: 10px;
-    cursor: pointer;
-    background: #f5f5f5;
-    border: solid rgb(139, 139, 139) 1px;
-    border-radius: 50%;
-    margin-left: 13px;
-    transition: ease all 0.3s;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 0.3s ease all;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-    display: block;
-    place-items: center;
-    position: relative;
-    width: 470px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 250px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-    }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
-    margin-top: 100px;
-  }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-    grid-row: span 2;
-    width: 50px;
-    display: block;
+    font-size: 35px;
+    color: #575757;
+    word-wrap:break-word;
   }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
-    font-size: 20px;
-    margin: 0;
-    grid-column: 3/4;
-    margin-top: 10px;
-    color: #707070;
-    text-decoration: line-through;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
-    font-size: 30px;
-    color: #0033C6;
-    font-weight: 800;
-    margin-top: 0px;
-    text-decoration: none;
-  }
-}
-
-@media (max-width: 650px) {
-  .App .most-wanted-container-mobile {
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    border: solid rgb(207, 207, 207) 2px;
-    position: relative;
-    transition: ease 0.5s all;
-  }
-  .App .most-wanted-container-mobile:hover {
-    border: solid blue 2px;
-  }
-  .App .most-wanted-container-mobile .pointy-container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-  .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-    height: 100%;
-    background: #F6F6F6;
-    display: grid;
-    place-items: center;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: left;
-    padding-left: 10px;
-    color: #0033C6;
-  }
-  .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
-    width: 0;
-    height: 0;
-    border-left: solid #F6F6F6 50px;
-    border-top: solid transparent 200px;
-    border-bottom: solid transparent 200px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container {
-    width: 500px;
-    margin-left: -30px;
-    overflow: hidden;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
-    cursor: pointer;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    right: 0px;
-    width: 50px;
-    display: grid;
-    place-items: center;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-    left: 220px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
-    transition: 0.3s ease all;
-    color: rgb(207, 207, 207);
-    font-size: 40px;
-  }
-  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
-    color: #0033C6;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
-    position: absolute;
-    display: flex;
-    right: 100px;
-    bottom: 10px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 10px;
-    width: 10px;
-    cursor: pointer;
-    background: #f5f5f5;
-    border: solid rgb(139, 139, 139) 1px;
-    border-radius: 50%;
-    margin-left: 13px;
-    transition: ease all 0.3s;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 0.3s ease all;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-    display: block;
-    place-items: center;
-    position: relative;
-    margin-right: 20px;
-    width: 470px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 250px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10px;
-    place-items: center;
-
-  }
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-  }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
     font-size: 20px;
     margin: 0;
@@ -617,6 +410,7 @@
     color: #707070;
     text-decoration: line-through;
   }
+  
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
     font-size: 30px;
     color: #0033C6;
@@ -624,4 +418,5 @@
     margin-top: 0px;
     text-decoration: none;
   }
+
 }
