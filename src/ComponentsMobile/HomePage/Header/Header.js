@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <div className='header'>
-                <SideMenu inputRef={sideMenuRef} />
+            <SideMenu inputRef={sideMenuRef} />
             <div className='imgContainer'>
                 <div>
                     <img onClick={openSideMenu} className='sandwich-menu' src='https://m.casasbahia.com.br/assets/images/ic-new-menu.svg'></img>

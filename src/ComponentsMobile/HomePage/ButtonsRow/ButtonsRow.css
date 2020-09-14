@@ -6,17 +6,19 @@
 .buttons-row .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-gap: 20px;
+    grid-gap: 10px;
     margin: 0 auto;
     width: 95%;
     padding:20px 0;
     place-items: center;
+    height: 100px;
+    
 }
 
 .grid > * {
-    height: 30px;
+    height: 18vh;
     border-radius: 10px;
-    width: 50%;
+    width: 22vw;
     background: white;
     display: grid;
     justify-items: center;
@@ -26,7 +28,7 @@
 }
 
 .grid > * > i {
-    font-size: 10px;
+    font-size: 30px;
     color: #2D5BC9;
     margin-top: 10px;
 }
@@ -34,7 +36,7 @@
 .grid > * > span {
     margin: 0 20px;
     margin-bottom: 13px;
-    font-size: 10px;
+    font-size: 15px;
     color: #2d5bc9;
     font-weight: bold;
     

@@ -1,26 +1,28 @@
 .App .categories-wrapper-mobile {
   position: relative;
-  margin-top: 100px;
+  display:grid;
+  justify-items: start;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+  
 }
 
 .App .categories-wrapper-mobile h1 {
-  font-size: 40px;
+  font-size: 30px;
   color: #004a9d;
   margin: 0;
-  position: absolute;
-  top: -60px;
-  left: 20px;
 }
 
 .App .categories-wrapper-mobile .categories-container-mobile {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
   background: white;
-  margin-top: 50px;
   border-radius: 20px;
-  padding: 40px 20px;
+  padding: 40px 0;
   place-items: center;
+      width: 100%;
+  
 }
 
 .App .categories-wrapper-mobile .categories-container-mobile .categories-item-mobile {
@@ -32,14 +34,14 @@
 .App .categories-wrapper-mobile .categories-container-mobile .categories-item-mobile a {
   text-decoration: none;
   display: block;
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
 
 .App .categories-wrapper-mobile .categories-container-mobile .categories-item-mobile p {
-  font-size: 30px;
+  font-size: 20px;
   margin: 10px 0;
   color: #004a9d;
  }

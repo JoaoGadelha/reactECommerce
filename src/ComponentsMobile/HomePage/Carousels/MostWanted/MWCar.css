@@ -1,11 +1,10 @@
 .App .most-wanted-container-mobile {
-  width: 100%;
-  background: white;
+  width: 80%;
   border-radius: 10px;
+  background: white;
   margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  border: solid rgb(207, 207, 207) 2px;
   position: relative;
   transition: ease 0.5s all;
   padding-bottom: 40px;
@@ -23,12 +22,11 @@
 }
 
 .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-  height: 100%;
   background: #F6F6F6;
   display: grid;
   place-items: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   text-align: left;
   padding-left: 10px;
   color: #0033C6;
@@ -41,16 +39,15 @@
 .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
   width: 0;
   height: 0;
-  border-left: solid #F6F6F6 100px;
-  border-top: solid transparent 270px;
-  border-bottom: solid transparent 270px;
+  border-left: solid #F6F6F6 50px;
+  border-top: solid transparent 210px;
+  border-bottom: solid transparent 210px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
   overflow: hidden;
-  
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
@@ -65,13 +62,13 @@
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-  left: 430px;
+  left: 35%;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
   transition: 0.3s ease all;
   color: rgb(207, 207, 207);
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
@@ -81,13 +78,13 @@
 .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
   position: absolute;
   display: flex;
-  right: 100px;
+  right: 30px;
   bottom: 20px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-  height: 20px;
-  width: 20px;
+  height: 12px;
+  width: 12px;
   cursor: pointer;
   background: #f5f5f5;
   border: solid rgb(139, 139, 139) 1px;
@@ -108,10 +105,12 @@
   place-items: center;
   position: relative;
   width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-  width: 400px;
+  width: 300px;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
@@ -120,9 +119,9 @@
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-  font-size: 35px;
+  font-size: 25px;
   color: #575757;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
@@ -134,289 +133,51 @@
 }
 
 .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
-  font-size: 30px;
+  font-size: 25px;
   color: #0033C6;
   font-weight: 800;
   margin-top: 0px;
   text-decoration: none;
 }
 
-@media (max-width: 1100px) {
-  .App .most-wanted-container-mobile {
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    margin: 50px auto;
-    display: block;
-    border: solid rgb(207, 207, 207) 2px;
-    position: relative;
-    transition: ease 0.5s all;
-    padding-bottom: 100px;
-  }
-  
-  .App .most-wanted-container-mobile:hover {
-    border: solid blue 2px;
-  }
-  
-  .App .most-wanted-container-mobile .pointy-container {
-
-    padding:0;
-    margin: 0 ;
-    display: block;
-  }
-  
-  .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-    height: 100%;
-    background: #F6F6F6;
-    font-weight: bold;
-    font-size: 40px;
-    color: #0033C6;
-    padding:20px 0;
-    margin: 0 ;
-  }
+@media (max-width: 850px) {
   
   .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
-    display: none;
     width: 0;
     height: 0;
-    border-left: solid #F6F6F6 100px;
-    border-top: solid transparent 270px;
-    border-bottom: solid transparent 270px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container {
-    width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
-    cursor: pointer;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    right: 30px;
-    width: 50px;
-    display: grid;
-    place-items: center;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
-    left: 30px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
-    transition: 0.3s ease all;
-    color: rgb(207, 207, 207);
-    font-size: 50px;
-  }
-  
-  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
-    color: #0033C6;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
-    position: absolute;
-    display: flex;
-    right: 100px;
-    bottom: 20px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-    background: #f5f5f5;
-    border: solid rgb(139, 139, 139) 1px;
-    border-radius: 50%;
-    margin-left: 20px;
-    transition: ease all 0.3s;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 0.3s ease all;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-    display: block;
-    place-items: center;
-    position: relative;
-    width: 600px;
+    border-left: solid #F6F6F6 50px;
+    border-top: solid transparent 150px;
+    border-bottom: solid transparent 150px;
   }
   
   .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 400px;
+    width: 200px;
+    margin-left: 7%;
   }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    margin-left: 50px;
-    width: 350px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-    font-size: 35px;
-    color: #575757;
-    word-wrap:break-word;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
-    font-size: 20px;
-    margin: 0;
-    margin-top: 10px;
-    color: #707070;
-    text-decoration: line-through;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
-    font-size: 30px;
-    color: #0033C6;
-    font-weight: 800;
-    margin-top: 0px;
-    text-decoration: none;
-  }
-
 }
 
-@media (max-width: 600px) {
-  .App .most-wanted-container-mobile {
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-    margin: 50px auto;
-    display: block;
-    border: solid rgb(207, 207, 207) 2px;
-    position: relative;
-    transition: ease 0.5s all;
-    padding-bottom: 100px;
-  }
-  
-  .App .most-wanted-container-mobile:hover {
-    border: solid blue 2px;
-  }
-  
+@media (max-width: 740px) {
   .App .most-wanted-container-mobile .pointy-container {
-
-    padding:0;
-    margin: 0 ;
     display: block;
+    width: 100%;
+    margin: 0px;
   }
   
   .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
-    height: 100%;
-    background: #F6F6F6;
-    font-weight: bold;
-    font-size: 40px;
-    color: #0033C6;
-    padding:20px 0;
-    margin: 0 ;
+      margin: 0;
+      border-radius: 10px 10px 0 0;
+      padding: 10px 0;
   }
-  
+
   .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
     display: none;
-    width: 0;
-    height: 0;
-    border-left: solid #F6F6F6 100px;
-    border-top: solid transparent 270px;
-    border-bottom: solid transparent 270px;
   }
-  
-  .App .most-wanted-container-mobile .mwcar-container {
-    width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-    
+
+  .App .most-wanted-container-mobile {
+    display: block;
   }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
-    cursor: pointer;
-    height: 100%;
-    position: absolute;
-    top: 45%;
-    right: 30px;
-    width: 50px;
-    display: grid;
-    place-items: center;
-  }
-  
+
   .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
     left: 30px;
   }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
-    transition: 0.3s ease all;
-    color: rgb(207, 207, 207);
-    font-size: 50px;
-  }
-  
-  .App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
-    color: #0033C6;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
-    position: absolute;
-    display: flex;
-    right: 22%;
-    bottom: 20px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-    background: #f5f5f5;
-    border: solid rgb(139, 139, 139) 1px;
-    border-radius: 50%;
-    margin-left: 20px;
-    transition: ease all 0.3s;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 0.3s ease all;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
-    display: block;
-    place-items: center;
-    position: relative;
-    width: 600px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
-    width: 400px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
-    margin-left: 50px;
-    width: 350px;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
-    font-size: 35px;
-    color: #575757;
-    word-wrap:break-word;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
-    font-size: 20px;
-    margin: 0;
-    margin-top: 10px;
-    color: #707070;
-    text-decoration: line-through;
-  }
-  
-  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
-    font-size: 30px;
-    color: #0033C6;
-    font-weight: 800;
-    margin-top: 0px;
-    text-decoration: none;
-  }
-
 }

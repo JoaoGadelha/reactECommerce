@@ -23,7 +23,7 @@
 
 .header .imgContainer div:first-child {
     display: grid;
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: 1fr 10fr;
     place-items: center;
 }
 
@@ -39,20 +39,22 @@
     grid-template-columns: 1fr 1fr;
     width: 100%;
     place-items: center;
+    
 }
 
 .header .imgContainer div:nth-child(2) img:nth-child(1) {
-    height: 40px;
+    height: 30px;
 }
 
 .header .imgContainer div:nth-child(2) img:nth-child(2) {
     justify-self: start;
-    height: 40px;
+    height: 30px;
 }
 
 .header .imgContainer div .logo {
-    width: 100%;
+    width: 200px;
     height: auto;
+    justify-self: start;
 }
 
 .header .input {
@@ -69,6 +71,7 @@
 
 .header .sandwich-menu {
     cursor: pointer;
+    width: 30px;
 }
 
 .header .side-menu {

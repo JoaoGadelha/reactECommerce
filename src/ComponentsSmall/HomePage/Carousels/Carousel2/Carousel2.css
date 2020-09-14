@@ -14,7 +14,7 @@
     position:relative;
     margin:0 auto;
     padding-bottom: 30px;
-    width: 100%;
+    width: 300px;
   }
   
   .App .carousel2-wrapper-small .carousel2-container .carousel2 {
@@ -61,7 +61,7 @@
     color:blue;
     font-size:30px;
     position:absolute;
-    top:55%;
+    top: 70%;
     cursor: pointer;
     left: 20px;
   }
@@ -167,10 +167,7 @@
 
   @media (max-width: 350px) {
     .App .carousel2-wrapper-small .carousel2-container .carousel2 {
-      margin-left: 3%;
+      margin-left: 0px;
     }
 
-    .App .carousel2-wrapper-small .fas {
-      top: 60%;
-    }
   }
