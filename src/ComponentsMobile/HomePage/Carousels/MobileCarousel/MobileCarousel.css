@@ -10,11 +10,14 @@
     width: 100%;
 }
 
-.mobile-carousel .container {
+.mobile-carousel .mobile-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    transition: ease all 0.3s;
-    width: 500%;
+    width: 100%;
+}
+
+.mobile-carousel .mobile-container img {
+    width: 100vw;
 }
 
 .mobile-carousel-wrapper .center-slick-dots {

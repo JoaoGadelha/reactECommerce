@@ -56,7 +56,7 @@ const MobileCarousel = () => {
     return (
         <div className='mobile-carousel-wrapper'>
             <div className='mobile-carousel'>
-                <div ref={carRef} className='container' onTransitionEnd={onTransEnd}>
+                <div ref={carRef} className='mobile-container' onTransitionEnd={onTransEnd}>
                     <img src={img1}></img>
                     <img src={img2}></img>
                     <img src={img3}></img>
