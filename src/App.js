@@ -17,9 +17,7 @@ function App() {
         );
       }*/
 
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
-  });
+  const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'});
   const isTablet = useMediaQuery({ query: '(max-width: 1224px) and (min-width: 500px)' });
   const isPhone = useMediaQuery({ query: '(max-width: 500px)' });
 
