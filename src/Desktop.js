@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import './App.css';
-import HeaderRow1 from './Components/HomePage/Header/HeaderRow1/HeaderRow1'
-import HeaderRow2 from './Components/HomePage/Header/HeaderRow2/HeaderRow2'
-import HeaderRow3 from './Components/HomePage/Header/HeaderRow3/HeaderRow3'
-import HeaderRow4 from './Components/HomePage/Header/HeaderRow4/HeaderRow4'
-import Banner1 from './Components/HomePage/Banner1/Banner1'
-import Carousel1 from './Components/HomePage/Carousels/Carousel1/Carousel1'
-import Promotion1 from './Components/HomePage/Promotion1/Promotion1'
-import SpecialCarousel from './Components/HomePage/Carousels/SpecialCarousel/SpecialCarousel'
-import Carousel2 from './Components/HomePage/Carousels/Carousel2/Carousel2'
-import Categories from './Components/HomePage/Categories/Categories'
-import MostWanted from './Components/HomePage/Carousels/MostWanted/MostWanted'
-import Products from './Components/HomePage/FirstPageProducts/Products'
-import Footer from './Components/HomePage/Footer/Footer'
+import Homepage from './Components/HomePage/HomePage'
+import SearchResult from './Components/SearchResultPage/SearchResult'
+import HeaderRow1 from './Components/Common/Header/HeaderRow1/HeaderRow1'
+import HeaderRow2 from './Components/Common/Header/HeaderRow2/HeaderRow2'
+import HeaderRow3 from './Components/Common/Header/HeaderRow3/HeaderRow3'
+import HeaderRow4 from './Components/Common/Header/HeaderRow4/HeaderRow4'
+import Footer from './Components/Common/Footer/Footer'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Desktop() {
 
@@ -23,16 +18,18 @@ function Desktop() {
                 <HeaderRow2 />
                 <HeaderRow3 />
                 <HeaderRow4 />
-                <Banner1 />
             </header>
-            <Carousel1 />
-            <Promotion1 />
-            <SpecialCarousel />
-            <Carousel2 />
-            <Categories />
-            <MostWanted />
-            <Products />
+            <Switch>
+                <Route path='/search'>
+                    <SearchResult />
+                </Route>
+                <Route path='/'>
+                    <Homepage />
+                </Route>
+            </Switch>
+
             <Footer />
+
         </div>
     );
 }
