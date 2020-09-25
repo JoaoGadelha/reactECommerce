@@ -20,52 +20,31 @@ const HeaderRow2 = () => {
         setInputState(e.target.value);
     }
 
-    useEffect(() => {
-        makeSearchResult();
-    }, [apiResponse]);
+
+
+
 
     const onSubmit = (e) => {
         e.preventDefault();
         fetch(
-            `https://api.rainforestapi.com/request?api_key=${apiKey}&type=search&amazon_domain=amazon.com&search_term=${inputState}&sort_by=price_high_to_low`
+            `https://api-do-joao.herokuapp.com/find/type/${inputState}`
         )
             .then((resp) => resp.json())
             .then((resp) => {
-                setApiResponse(resp);
-                console.log(apiResponse)
+                setSearchResult(resp);
             });
+        history.push("/search");
     }
 
-    const makeSearchResult = () => {
-        if (!(Object.keys(apiResponse).length === 0 && apiResponse.constructor === Object)) {
-            count = 0;
-            for (let i = 0; i < apiResponse.search_results.length; i++) {
-                if ((apiResponse.search_results[i].hasOwnProperty('price'))) {
-                    if ((apiResponse.search_results[i].hasOwnProperty('title') )) {
-                        if ((apiResponse.search_results[i].hasOwnProperty('image') )) {
-                            if ((apiResponse.search_results[i].hasOwnProperty('asin') )) {
-                                processedApiResponse[count] = apiResponse.search_results[count];
-                                count++;
-                            }
-                        }
-                    }
-                }
-            }
-            setSearchResult(processedApiResponse);
-        }
-        console.log(searchResult);
-    }
 
-    return ( 
+
+    return (
         <div className='header-row-2'>
             <img src={logo} alt='logo_electro_shopping'></img>
-            {!(Object.keys(searchResult).length === 0 && searchResult.constructor === Object)?<h1>Cheio</h1>:<h1>Vazio</h1> }
             
             <form onSubmit={onSubmit}>
                 <input placeholder='What are you looking for ?' value={inputState} onChange={onChange} ></input>
-                <i className="fas fa-search" onClick={() => {
-                    history.push("/search");
-                }}></i>
+                <i className="fas fa-search" onClick={onSubmit}></i>
             </form>
             <span>
                 <i className="fas fa-user"></i>
