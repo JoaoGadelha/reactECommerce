@@ -1,0 +1,44 @@
+.buttons-row-small {
+    background: #EBEBEB;
+    width: 100%;
+}
+
+.buttons-row-small .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+    padding:20px 0;
+    place-items: center;
+}
+
+.buttons-row-small .grid > * {
+    height: 130px;
+    border-radius: 10px;
+    width: 80%;
+    background: white;
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    text-align: center;
+    border-bottom: 10px solid #2D5BC9;
+}
+
+.buttons-row-small .grid .item1, .buttons-row-small .grid .item2 {
+    margin-bottom: 20px;
+    
+}
+
+.buttons-row-small .grid > * > i {
+    font-size: 50px;
+    color: #2D5BC9;
+    margin-top: 10px;
+}
+
+.buttons-row-small .grid > * > span {
+    margin: 0 20px;
+    margin-bottom: 13px;
+    font-size: 16px;
+    color: #2d5bc9;
+    font-weight: bold;
+}
