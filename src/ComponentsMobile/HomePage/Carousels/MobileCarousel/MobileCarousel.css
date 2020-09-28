@@ -1,0 +1,45 @@
+.mobile-carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mobile-carousel {
+    background: #EBEBEB;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.mobile-carousel .mobile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.mobile-carousel .mobile-container img {
+    width: 100vw;
+}
+
+.mobile-carousel-wrapper .center-slick-dots {
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    bottom: -20px;
+}
+
+.mobile-carousel-wrapper .slick-dots {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: absolute;
+    width: 200px;
+    place-items: center;
+    left: -50%;
+}
+
+.mobile-carousel-wrapper .dot {
+    height: 20px;
+    width: 20px;
+    background: #EBEBEB;
+    border-radius: 50%;
+}

@@ -1,0 +1,38 @@
+.footer-mobile {
+    background: #F5F5F5;
+    height: 300px;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.footer-mobile .container {
+    width: 80%;
+    line-height: 30px;
+}
+
+.footer-mobile h5 {
+    color: #0033c6;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-mobile span {
+    font-size: 14px;
+    color: #707070;
+}
+
+.footer-mobile .container button {
+    display: block;
+    width: 100%;
+    background: #0033c6;
+    font-weight: 1000;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    margin: 20px 0;
+}
