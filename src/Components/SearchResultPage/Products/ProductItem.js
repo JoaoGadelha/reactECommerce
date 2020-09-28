@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-const ProductItem = ({img, title, oldPrice, price}) => {
+const ProductItem = ({ id, img, title, oldPrice, price }) => {
+    let prodPage = '/product/' + id;
+
     return (
-        <div className='product-item'>
-            <img src={img}></img>
-            <span>{title}</span>
-            <span>{oldPrice}</span>
-            <span>{price}</span>
-        </div>
+        <>
+            {
+                (title.length !== 0) ? <div className='product-item'>
+                    <Link to={prodPage}><img src={img} ></img></Link>
+                    <span>{title}</span>
+                    {
+                        oldPrice.length !== 0 ?
+                            <span>$ {oldPrice}</span>
+                            : <span></span>
+                    }
+                    <span>$ {price}</span>
+                </div> : <div></div>
+            }
+        </>
     )
 }
 

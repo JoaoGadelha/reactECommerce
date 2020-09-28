@@ -23,7 +23,7 @@ function Desktop() {
             <Switch>
                 <Route path='/product/:id' component={ProductPage}>
                 </Route>
-                <Route path='/search/:parameter' component={SearchResult}>
+                <Route path='/search/' component={SearchResult}>
                 </Route>
                 <Route path='/'>
                     <Homepage />
