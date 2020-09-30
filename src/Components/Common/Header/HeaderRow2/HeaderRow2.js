@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import logo from './HeaderRow2_img/logo.svg';
 import './HeaderRow2.css'
 import { Context } from '../../../../Context'
-import { useHistory } from "react-router-dom";
+import { Link,  useHistory } from "react-router-dom";
 
 
 
@@ -46,15 +46,15 @@ const HeaderRow2 = () => {
                 <input placeholder='What are you looking for ?' value={inputState} onChange={onChange} ></input>
                 <i className="fas fa-search" onClick={onSubmit}></i>
             </form>
-            <span>
+            <Link to='/signup'>
                 <i className="fas fa-user"></i>
                 <strong>
-                    <a href='www.google.com'>Log In or Sign up</a>
+                    <span>Log In or Sign up</span>
                 </strong>
                 <span>
-                    <a href='www.google.com'>To see your products</a>
+                   To see your products
                 </span>
-            </span>
+            </Link>
             <i className="fas fa-shopping-cart"></i>
         </div>
     )
