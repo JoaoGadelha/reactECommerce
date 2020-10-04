@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import styles from './LoginPage.module.css'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { useState } from 'react'
+import { Context } from '../../Context'
 
 const LoginPage = () => {
 
-    let [email, setEmail] = useState('');
-    let [pw, setPw] = useState('');
+    let [email, setEmail] = useState('fnel@yahoo.com');
+    let [pw, setPw] = useState('12345');
+    let {userId, setUserId } = useContext(Context);
+
 
     async function postData(url = '', data = {}) {
         // Default options are marked with *
@@ -29,8 +32,8 @@ const LoginPage = () => {
                 <input placeholder='E-mail address' onChange={(event) => {
                     event.preventDefault();
                     setEmail(event.target.value);
-                }} value={email}></input>
-                <input placeholder='Password' value={pw} onChange={(event) => {
+                }} value='fnel@yahoo.com'></input>
+                <input placeholder='Password' value='12345' onChange={(event) => {
                     event.preventDefault();
                     setPw(event.target.value);
                 }}></input>
@@ -38,9 +41,13 @@ const LoginPage = () => {
                     let originalData = { email: email, password: pw };
                     postData('https://electroshopping-user-regist.herokuapp.com/login', originalData)
                         .then(data => {
-                            console.log(data); // JSON data parsed by `data.json()` call
+                            setUserId(data.id); // JSON data parsed by `data.json()` call
                         });
+
+                
                 }}> Sign in </button>
+                <h1>{userId}</h1>
+                {userId !== ''? <Redirect to="/" />:''}
                 <h1>Don't have an account ?</h1>
                 <Link class={styles.Link} to='/signup'><div class={styles.button2}>Create account</div></Link>
             </div>

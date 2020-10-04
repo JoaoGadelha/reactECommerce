@@ -2,13 +2,13 @@ import React, { useState, useContext, useEffect } from 'react'
 import logo from './HeaderRow2_img/logo.svg';
 import './HeaderRow2.css'
 import { Context } from '../../../../Context'
-import { Link,  useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 
 const HeaderRow2 = () => {
 
-    let [searchResult, setSearchResult, currentProduct, setCurrentProduct, apiKey] = useContext(Context);
+    let {setSearchResult} = useContext(Context);
     let [inputState, setInputState] = useState('');
     const history = useHistory();
     let [apiResponse, setApiResponse] = useState({});
@@ -41,7 +41,7 @@ const HeaderRow2 = () => {
     return (
         <div className='header-row-2'>
             <img src={logo} alt='logo_electro_shopping'></img>
-            
+
             <form onSubmit={onSubmit}>
                 <input placeholder='What are you looking for ?' value={inputState} onChange={onChange} ></input>
                 <i className="fas fa-search" onClick={onSubmit}></i>
@@ -52,10 +52,12 @@ const HeaderRow2 = () => {
                     <span>Log In or Sign up</span>
                 </strong>
                 <span>
-                   To see your products
+                    To see your products
                 </span>
             </Link>
-            <i className="fas fa-shopping-cart"></i>
+            <Link to='/shopcart'>
+                <i className="fas fa-shopping-cart"></i>
+            </Link>
         </div>
     )
 }
