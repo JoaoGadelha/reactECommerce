@@ -14,6 +14,7 @@ const ShopCartPage = () => {
     let prodListAux = [];
     let [firstRender1, setFirstRender1] = useState(true);
     let [firstRender2, setFirstRender2] = useState(true);
+    let [auxState, setAuxState] = useState('');
 
     // fetches the id's of all products in the user's shopping cart
     useEffect(() => {
@@ -39,23 +40,17 @@ const ShopCartPage = () => {
     }, [shopCartIds])
 
     // when 'requestShopCartItems' has finished executing, call 'updateProdList'
-    useEffect(() => {
-        let aux = shopCartItems;
-        console.log('i entered');
-        if (aux !== undefined && aux.finishedExec) {
-            setFirstRender2(false);
-        }
-    }, [shopCartItems])
 
     useEffect(() => {
+        console.log(firstRender2, shopCartItems);
         if (!firstRender2) {
             let aux = shopCartItems;
-            console.log(aux);
-            if (aux !== undefined && aux.finishedExec) {
+            if (aux !== undefined && aux.finishedExec === true) {
                 updateProdList();
             }
         }
-    }, [firstRender2]);
+        setFirstRender2(false);
+    }, [firstRender2, shopCartItems, auxState]);
 
     // fetches products image and data and stores it in 'shopCartItems'
     const requestShopCartItems = async () => {
@@ -80,26 +75,24 @@ const ShopCartPage = () => {
             //}
             //alreadyExecuted = false;
         }
+        setAuxState(shopCartItems);
     }
 
     // Updates the products list, which renders products image and info in the shopping cart
     const updateProdList = () => {
         console.log('updateProdList');
         prodListAux = [];
-        for (let i = 0; i < shopCartItems.length; i++) {
+        console.log(shopCartItems);
+        for (let i = 0; i < shopCartItems.prodArray.length; i++) {
+
             prodListAux.push(
+
                 <>
+                    <img src={shopCartItems.prodArray[i].image[0]}></img>
                     <h1>1</h1>
-                    <h1>1</h1>
-                    <h1>1</h1>
-                    <h1>1</h1>
+                    <h1>{shopCartItems.prodArray[i].price}</h1>
+                    <h1>{shopCartItems.prodArray[i].price}</h1>
                 </>
-                /*   <>
-                      <img src={shopCartItems[0][0].image[0]}></img>
-                      <h1>1</h1>
-                      <h1>{shopCartItems[0][0].price}</h1>
-                      <h1>{shopCartItems[0][0].price}</h1>
-                  </> */
             )
         }
         setProdList(prodListAux);
@@ -121,7 +114,6 @@ const ShopCartPage = () => {
     if (shopCartItems !== undefined && Object.keys(shopCartItems).length > 1) {
         return (
             <div class={styles.container}>
-                <h1 style={{ color: 'red' }}>{shopCartItems.length}</h1>
                 <h1>Product</h1><h1>Quantity</h1><h1>Unit price</h1><h1>Total price</h1>
                 {prodList}
 
