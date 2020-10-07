@@ -1,0 +1,26 @@
+
+.smfooter {
+    margin-left: 20px;
+    line-height: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.smfooter h1 {
+    color: #333333;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-top: solid rgb(201, 201, 201) 1px;
+    padding-top:10px;
+}
+
+.smfooter h1.blue {
+    color: blue;
+    border-top: none;
+}
+
+.smfooter h1.blue:first-child {
+    border-top: solid rgb(201, 201, 201) 1px;
+    padding-top: 10px;
+}

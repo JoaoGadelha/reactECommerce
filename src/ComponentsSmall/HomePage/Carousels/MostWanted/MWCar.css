@@ -1,0 +1,156 @@
+
+.App .most-wanted-container-small {
+    width:80%;
+    background:white;
+    border-radius: 10px;
+    margin: 50px auto;
+    display: block;
+    padding:20px;
+    height:auto;
+    border: solid rgb(207, 207, 207) 2px;
+    position: relative;
+    transition: ease 0.5s all;
+}
+
+.App .most-wanted-container-small:hover {
+  border: solid blue 2px;
+  
+}
+
+
+.App .most-wanted-container-small .pointy-container {
+  display: block;
+}
+
+.App .most-wanted-container-small .pointy-container .pointy-box1 {  
+  text-align: center;
+  background: #F6F6F6;
+  display:grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left:10px;
+  color: #0033C6;
+  width: 100%;
+}
+
+.App .most-wanted-container-small .pointy-container .pointy-box2 {
+  display: none;
+  width:0;
+  height:0;
+  border-left: solid #F6F6F6 50px;
+  border-top: solid transparent 100px;
+  border-bottom: solid transparent 100px;
+}
+
+.App .most-wanted-container-small .mwcar-container {
+  height: auto;
+  width: 200px;
+  margin-left: 25%;
+  overflow:hidden;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-arrow-div {
+  cursor: pointer;
+      
+  
+  position:absolute;
+  top:50%;
+  right: 0px;
+  width:50px;
+  display: grid;
+  place-items:center;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-arrow-div:nth-child(2) {
+  
+  left: 00px;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-arrow-div .fas {
+  transition: 0.3s ease all;
+  color: rgb(207, 207, 207);
+  font-size:30px;
+}
+
+.App .most-wanted-container-small:hover .mwcar-arrow-div .fas {
+  color: #0033C6;
+}
+
+.App .most-wanted-container-small .mwcar-container .slick-dots-container {
+  position:absolute;
+  display: flex;
+  right: 10px;
+  bottom: 10px;
+}
+
+.App .most-wanted-container-small .mwcar-container .slick-dots-container .dot-item {
+  height:10px;
+  width:10px;
+  cursor: pointer;
+  background:#f5f5f5;
+  border: solid rgb(139, 139, 139) 1px;
+  border-radius:50%;
+  margin-left:13px;
+  transition: ease all 0.3s;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  transition: 0.3s ease all;
+}
+
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item {
+  display: block;
+  height: 340px;
+  position: relative;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item img{
+  margin-top: 20px;
+  height:200px;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
+  margin-left: 20px;
+  width: 100%;
+  position: absolute;
+  height: 200px;
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
+  font-size: 20px;
+  color: #575757
+}
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
+  font-size: 16px;
+  margin: 0;
+  margin-top:10px;
+  color: #707070;
+  text-decoration: line-through;
+}
+
+
+.App .most-wanted-container-small .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
+  font-size: 24px;
+  color: #0033C6;
+  font-weight: 800;
+  margin-top: 0px;
+  text-decoration: none;
+}
+
+
+@media( max-width: 380px) {
+  .App .most-wanted-container-small .mwcar-container {
+    margin-left: 17%;
+  }
+}
+
+@media( max-width: 320px) {
+  .App .most-wanted-container-small .mwcar-container {
+    margin-left: 10%;
+  }
+}
