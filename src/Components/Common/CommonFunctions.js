@@ -1,11 +1,12 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useContext } from 'react';
+import { Context } from '../../Context'
 
 export const useIsFirstRender = () => {
-  const isMountRef = useRef(true);
-  useEffect(() => {
-    isMountRef.current = false;
-  }, []);
-  return isMountRef.current;
+    const isMountRef = useRef(true);
+    useEffect(() => {
+        isMountRef.current = false;
+    }, []);
+    return isMountRef.current;
 };
 
 const filteredSearchResult = (searchResult) => {

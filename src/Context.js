@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import {postData} from './Components/Common/CommonFunctions'
+import { postData } from './Components/Common/CommonFunctions'
 
 export const Context = React.createContext();
 
@@ -12,13 +12,6 @@ export const Provider = (props) => {
   let apiKey = 'E1037F0020A144018FC111B6011BE147';
   let [shopCart, setShopCart] = useState([]);
   let [firstRender, setFirstRender] = useState(true);
-
-  useEffect(() => {
-    if (!firstRender) {
-      
-    }
-    setFirstRender(false);
-  }, [])
 
 
 
@@ -32,9 +25,11 @@ export const Provider = (props) => {
  */
 
   return (
-    <Context.Provider value={{ searchResult, setSearchResult,
-     currentProduct, setCurrentProduct, apiKey,
-      userId, setUserId, shopCart, setShopCart }}>
+    <Context.Provider value={{
+      searchResult, setSearchResult,
+      currentProduct, setCurrentProduct, apiKey,
+      userId, setUserId, shopCart, setShopCart
+    }}>
       {props.children}
     </Context.Provider>
   );
