@@ -20,7 +20,7 @@ input {
     margin-bottom: 20px;
 }
 
-button {
+.createBtn {
     width: 200px;
     height: 50px;
     background: rgb(0, 51, 198);
@@ -32,7 +32,7 @@ button {
     font-size: 15px;
 }
 
-.button2 {
+.signinBtn {
     width: 200px;
     height: 50px;
     background: white;

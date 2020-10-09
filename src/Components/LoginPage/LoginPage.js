@@ -37,7 +37,7 @@ const LoginPage = () => {
                     event.preventDefault();
                     setPw(event.target.value);
                 }}></input>
-                <button onClick={() => {
+                <button class={styles.signinBtn} onClick={() => {
                     let originalData = { email: email, password: pw };
                     postData('https://electroshopping-user-regist.herokuapp.com/login', originalData)
                         .then(data => {
@@ -49,7 +49,7 @@ const LoginPage = () => {
                 <h1>{userId}</h1>
                 {userId !== ''? <Redirect to="/" />:''}
                 <h1>Don't have an account ?</h1>
-                <Link class={styles.Link} to='/signup'><div class={styles.button2}>Create account</div></Link>
+                <Link class={styles.Link} to='/signup'><div class={styles.createBtn}>Create account</div></Link>
             </div>
         </>
     )
