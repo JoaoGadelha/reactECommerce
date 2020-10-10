@@ -7,28 +7,33 @@ import CartItem from './CartItem/CartItem'
 
 const ShopCartPage = () => {
     let { userId, shopCart, setShopCart } = useContext(Context);
-    let reqBody = { userId: userId };
     let isFirstRender = useIsFirstRender();
     let [runFlag, setRunFlag] = useState(false);
+    let [count, setCount] = useState(0);
 
     // fetches the id's of all products in the user's shopping cart
     useEffect(() => {
-        postData(`https://electroshopping-user-regist.herokuapp.com/getShopCart/${userId}`, reqBody)
+        console.log('useEffect1');
+        let auxCart = [];
+        postData(`https://electroshopping-user-regist.herokuapp.com/getShopCart/${userId}`, { userId: userId })
             .then(data => {
-                let auxCart = [];
                 for (let i = 0; i < data.shopCart.length; i++) {
                     auxCart[i] = {};
                     auxCart[i].id = data.shopCart[i].id;
                     auxCart[i].quantity = data.shopCart[i].quantity;
                 }
-                setShopCart(auxCart); // JSON data parsed by `data.json()` call
             });
+        setShopCart(auxCart);
     }, [])
 
     useEffect(() => {
-        console.log('cart');
-        console.log(shopCart.length);
-        if (!isFirstRender && shopCart[0] !== undefined && Object.keys(shopCart[0]).length === 2) {
+
+    })
+
+    useEffect(() => {
+        console.log('useEffect2');
+        if (!isFirstRender) {
+            console.log('cart');
             let aux = [...shopCart];
             for (let i = 0; i < shopCart.length; i++) {
                 fetch(`https://api-do-joao.herokuapp.com/find/id/${shopCart[i].id}`).
@@ -39,30 +44,24 @@ const ShopCartPage = () => {
                         aux[i].price = res[0].price;
                         aux[i].oldPrice = res[0].oldPrice;
                         aux[i].type = res[0].type;
-                        setShopCart(aux);
                     });
             }
+            setShopCart(aux);
         }
-    }, [shopCart]);
+        console.log(shopCart);
+    }, [runFlag]);
 
     useEffect(() => {
-        console.log('aaa');
-        console.log(shopCart)
-        if (shopCart[0] !== undefined && Object.keys(shopCart[0]).length > 2) {
-            console.log('bbb');
-            if (shopCart[1] !== undefined && Object.keys(shopCart[1]).length > 2) {
-                console.log('ccc');
-                if (shopCart[2] !== undefined && Object.keys(shopCart[2]).length > 2) {
-                    console.log('ddd');
-                    setRunFlag(true);
-                }
-            }
+        if (count <= 2000) {
+            setCount(prev => prev + 1);
         }
-    }, [shopCart]);
+    }, [count])
 
-    if (runFlag) {
+    if (count >= 2000) {
+        console.log(shopCart);
         return (
             <div class={styles.container}>
+                <h1>{shopCart[0] !== undefined ? Object.keys(shopCart).length : 'empty'}</h1>
                 <h1>Product</h1><h1>Quantity</h1><h1>Unit price</h1><h1>Total price</h1><div></div>
                 {
                     shopCart.map((product, i, array) => <CartItem key={product.id} product={product} index={i} array={array} />)
@@ -70,15 +69,9 @@ const ShopCartPage = () => {
             </div>
         )
     } else {
-        console.log(shopCart);
         return (
-            <div>
-                <h1>{runFlag ? 'true' : 'false'}</h1>
-                <button onClick={() => {
-                    console.log(shopCart[0].price);
-                }}>Show</button></div>
+            <div><h1>{count}</h1></div>
         )
     }
 }
-
 export default ShopCartPage
