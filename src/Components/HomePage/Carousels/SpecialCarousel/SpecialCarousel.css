@@ -61,6 +61,8 @@
   
   .App .special-carousel-wrapper .special-carousel-products * {
     font-size:10px;
+    margin-top: 10px;
+    text-align: left;
   }
   
   

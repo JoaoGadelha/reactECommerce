@@ -1,7 +1,35 @@
 import React from 'react';
 import './HeaderRow3.css'
+import Container from './Container'
 
 const HeaderRow3 = () => {
+let cont1 = [
+    'Accessories and innovations',
+                                'Food',
+                                'Ventilation',
+                                'Handicraft',
+                                'Party items',
+                                'Audio',
+                                'Automotive',
+                                'Babies',
+                                'Drinks',
+                                'Beauty and Health',
+                                'Toys'
+];
+
+let cont2 = [
+    'Releases',
+    'Samsung Galaxy',
+    'iPhone',
+    'Motorola',    
+    'LG',
+    'Zenfones',
+    'Huawei',
+    'Handicraft',     
+    'Smartwatches'
+]
+
+
     return (
         <div className='header-row-3'>
             <div className='grid-container'>
@@ -10,42 +38,12 @@ const HeaderRow3 = () => {
                         <div className='dropdown-content ddc1' >
                             <h3>Divisions</h3>
                             <ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Accessories and innovations</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Food</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Ventilation</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Handicraft</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Party items</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Audio</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Automotive</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Babies</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Drinks</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Beauty and Health</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Toys</a></li>
+                                {cont1.map((item)=><Container text={item}></Container>)}
                             </ul>
                             <ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Accessories and innovations</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Food</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Ventilation</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Handicraft</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Party items</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Audio</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Automotive</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Babies</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Drinks</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Beauty and Health</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Toys</a></li>
+                            {cont1.map((item)=><Container text={item}></Container>)}
                             </ul><ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Accessories and innovations</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Food</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Ventilation</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Handicraft</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Party items</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Audio</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Automotive</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Babies</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Drinks</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Beauty and Health</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Toys</a></li>
+                            {cont1.map((item)=><Container text={item}></Container>)}
                             </ul>
                         </div>
                     </div>
@@ -55,19 +53,7 @@ const HeaderRow3 = () => {
                         <div className='dropdown-content ddc2' >
                             <h3>Choose the brand</h3>
                             <ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Releases</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Samsung Galaxy</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>iPhone</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Motorola</a></li>                               
-                            </ul>
-                            <ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>LG</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Zenfones</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Huawei</a></li>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Handicraft</a></li>                                
-                            </ul><ul>
-                                <li><a href='www.google.com' style={{ textDecoration: 'none' }}>Smartwatches</a></li>
-                            </ul>
+                               </ul>
                         </div>
                     </div>
                 </div>

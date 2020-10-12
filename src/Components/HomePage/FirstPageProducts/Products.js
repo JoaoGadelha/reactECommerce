@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import styles from './Products.module.css'
 import img11 from './FirstPageProducts_img/items/slide1/img11'
 import img12 from './FirstPageProducts_img/items/slide1/img12'
 import img13 from './FirstPageProducts_img/items/slide1/img13'
@@ -9,7 +10,6 @@ import img31 from './FirstPageProducts_img/items/slide3/img31'
 import img32 from './FirstPageProducts_img/items/slide3/img32'
 import img33 from './FirstPageProducts_img/items/slide3/img33'
 import ProductItem from './ProductItem'
-import './Products.css'
 
 const Products = () => {
 
@@ -21,23 +21,6 @@ const Products = () => {
     let imgArray = [img11, img12, img13, img21, img22, img23, img31, img32, img33];
     let randArray = [];
     let newImg;
-    let randImg1,
-        randImg2,
-        randImg3,
-        randImg4,
-        randTitle1,
-        randTitle2,
-        randTitle3,
-        randTitle4,
-        randPrice1,
-        randPrice2,
-        randPrice3,
-        randPrice4,
-        randOldPrice1,
-        randOldPrice2,
-        randOldPrice3,
-        randOldPrice4;
-    let titleArray = [];
 
     let [productList, setProductList] = useState([]);
 
@@ -52,8 +35,6 @@ const Products = () => {
         newI.appendChild(newImg);
         return newI;
     }
-
-
 
     const addMoreProducts = () => {
         //for (let j = 0; j < nRowsPerLoad; j++) {
@@ -86,9 +67,9 @@ const Products = () => {
     }
 
     return (
-        <div className='products-container'>
-            <h1>New Products for You</h1>
-            <div className='products-grid'>
+        <div className={styles.container}>
+            <h1 className={styles.containerTitle}>New Products for You</h1>
+            <div className={styles.productsGrid}>
                 <ProductItem img={img11} title={'TV 65 Polegadas LG LED Smart Wifi 4k Usb HDMI Comando Voz 65um7470psa.awz'} oldPrice = {'$ 1349.90'} price={'$ 1199.90'} />
                 <ProductItem img={img21} title={'TV 65 Polegadas LG LED Smart Wifi 4k Usb HDMI Comando Voz 65um7470psa.awz'} oldPrice = {'$ 1349.90'} price={'$ 1199.90'} />
                 <ProductItem img={img31} title={'TV 65 Polegadas LG LED Smart Wifi 4k Usb HDMI Comando Voz 65um7470psa.awz'} oldPrice = {'$ 1349.90'} price={'$ 1199.90'} />
@@ -103,7 +84,7 @@ const Products = () => {
                 <ProductItem img={img13} title={'TV 65 Polegadas LG LED Smart Wifi 4k Usb HDMI Comando Voz 65um7470psa.awz'} oldPrice = {'$ 1349.90'} price={'$ 1199.90'} />
                 {productList}
             </div>
-            <button onClick={addMoreProducts}> Load more products</button>
+            <button onClick={addMoreProducts} className={styles.gridBtn}> Load more products</button>
         </div>
     )
 

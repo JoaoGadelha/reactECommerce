@@ -1,12 +1,12 @@
 import React from 'react'
-import './SubsNewsLetter.css'
+import styles from './SubsNewsLetter.module.css'
 
 
 const SubsNewsLetter = () => {
 
    return (
-      <div className='snl-wrapper'>
-         <div className='snl-container'>
+      <div className={styles.wrapper}>
+         <div className={styles.container}>
             <span>Subscribe to receive more offers!</span>
             <input placeholder='Type your e-mail'></input>
             <input placeholder='Type your name'></input>

@@ -5,7 +5,7 @@ const Carousel2Item = (props) => {
     let prodDetail = props.prodDetail;
     let oldPrice = props.oldPrice;
     let price = props.price;
-    let install = props.install;
+    let install = '';
     let prodImg = props.prodImg;
     let visible = props.visible;
 

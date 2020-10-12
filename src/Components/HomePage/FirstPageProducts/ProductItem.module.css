@@ -1,0 +1,33 @@
+.productItem {
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.productItem img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+}
+
+.productItem span {
+    font-size: 12px;
+    display: block;
+    color: #004a9d;
+}
+
+.productItem span:nth-child(3) {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #666666;
+    margin-top: 25px;
+}
+
+.productItem span:nth-child(4) {
+    font-size: 23px;
+    color: #004a9d;
+    font-weight: bold;
+}

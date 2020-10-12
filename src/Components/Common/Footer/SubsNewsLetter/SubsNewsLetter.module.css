@@ -1,0 +1,42 @@
+ .wrapper {
+    background: #0033C6;
+    display:grid;
+    place-items: center;
+  }
+  
+   .container {
+    height:80px;
+    background: #0033C6;
+    color:white;
+    display: grid;
+    font-weight: bold;
+    place-items:center;
+    margin: 0 auto;
+    grid-template-columns: 340px 340px 340px 340px;
+    grid-gap: 20px;
+  }
+  
+   .container span {
+    font-size: 1.22em;
+  }
+  
+   .container input {
+    width: 100%;
+    height:40px;
+    border-radius:3px;
+    border:0;
+    margin:0;
+    padding:0px 5px;
+  }
+  
+   .container button {
+    justify-self: start;
+    width:200px;
+    height: 40px;
+    font-size: 1.125em;
+    background: red;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 700;
+  }

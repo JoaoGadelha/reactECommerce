@@ -90,15 +90,15 @@ const Carousel2 = () => {
             <div className='carousel2-container'>
                 <Deadline1 />
                 <div className='carousel2' onTransitionEnd={hideItems}>
-                    <Carousel2Item flag='' prodDetail='Washing Machine Brastemp BWK12AB with Advanced Stain Removal White - 12Kg' oldPrice={<>Old price: <span>$349.90</span></>} price='$299.90' install='Up to 10 payments interest-free' prodImg={img1} visible={true} />
+                    <Carousel2Item flag='' prodDetail='Washing Machine Brastemp BWK12AB with Advanced Stain Removal White - 12Kg' oldPrice={<> <span>$349.90</span></>} price='$299.90' install='Up to 10 payments interest-free' prodImg={img1} visible={true} />
                     <Carousel2Item flag='' prodDetail='Professional Ceramic Electric Hairbrush MegaHair with Natural Bristle and Nylon' oldPrice={''} price='$19.90' install='' prodImg={img2} visible={true} />
-                    <Carousel2Item flag='' prodDetail='Wireless Earphones JBL Tune 220TWS Pure Bass  Battery 19 Hours White' oldPrice={<>Old price: <span>$119.90</span></>} price='$99.90' install='Up to 12 payments interest-free' prodImg={img3} visible={true} />
+                    <Carousel2Item flag='' prodDetail='Wireless Earphones JBL Tune 220TWS Pure Bass  Battery 19 Hours White' oldPrice={<> <span>$119.90</span></>} price='$99.90' install='Up to 12 payments interest-free' prodImg={img3} visible={true} />
                     <Carousel2Item flag='' prodDetail='Acoustic Guitar Nylon Ac39 Pink Memphis By Tagima' oldPrice={''} price='$59.90' install='Up to 10 payments interest-free' prodImg={img4} visible={true} />
                     <Carousel2Item flag='' prodDetail='Air Conditioner Split Samsung Digital Inverter 11.500 BTU/h Frio AR12NVFPCWKNAZ' oldPrice={''} price='$459.90' install='Up to 10 payments interest-free' prodImg={img5} visible={''} />
-                    <Carousel2Item flag='' prodDetail='Smart TV LED 43" Full HD Samsung T5300 HDR, Tizen OS, Wi-Fi...' oldPrice={<>Old price: <span>$349.90</span></>} price='$329.90' install='Up to 12 payments interest-free' prodImg={img6} visible={''} />
+                    <Carousel2Item flag='' prodDetail='Smart TV LED 43" Full HD Samsung T5300 HDR, Tizen OS, Wi-Fi...' oldPrice={<> <span>$349.90</span></>} price='$329.90' install='Up to 12 payments interest-free' prodImg={img6} visible={''} />
                     <Carousel2Item flag='' prodDetail='Laundry Detergent Comfort Fiber Protect 3L' oldPrice={''} price='$32.90' install='Up to 10 payments interest-free' prodImg={img7} visible={''} />
                     <Carousel2Item flag='' prodDetail='Powdered Milk for Kids Ninho Phases 1 Kit 6 Cans 800G' oldPrice={''} price='$49.90' install='Up to 10 payments interest-free' prodImg={img8} visible={''} />
-                    <Carousel2Item flag='' prodDetail='Digital Camera and Recorder Xtrax Selfie 4K 16MP Red' oldPrice={<>Old price: <span>$89.90</span></>} price='$79.90' install='Up to 12 payments interest-free' prodImg={img9} visible={''} />
+                    <Carousel2Item flag='' prodDetail='Digital Camera and Recorder Xtrax Selfie 4K 16MP Red' oldPrice={<> <span>$89.90</span></>} price='$79.90' install='Up to 12 payments interest-free' prodImg={img9} visible={''} />
                     <Carousel2Item flag='' prodDetail='Couple Microfiber Sheets  180g/m² - Coral' oldPrice={''} price='$24.90' install='Up to 10 payments interest-free' prodImg={img10} visible={''} />
                     <Carousel2Item flag='' prodDetail='Kit Gin Beefeater Dry 750ml + Wine Glass 550ml' oldPrice={''} price='$39.90' install='Up to 10 payments interest-free' prodImg={img11} visible={''} />
                     <Carousel2Item flag='' prodDetail='Bed Box Queen Size + Matress Herval Capri Pillow Inn e Bagged Springs 64x158x1...' oldPrice={''} price='$129.90' install='Up to 10 payments interest-free' prodImg={img12} visible={''} />

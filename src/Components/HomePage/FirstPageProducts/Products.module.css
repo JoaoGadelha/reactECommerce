@@ -1,0 +1,34 @@
+ .container .containerTitle {
+  font-size: 30px;
+  color: #004a9d;
+  text-align:left;
+  margin-left: 110px;
+}
+
+.gridBtn {
+  background: #004a9d;
+  height: 50px;
+  width: 250px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ .container button:focus {
+  outline: none;
+}
+
+ .container .productsGrid {
+  display: grid;
+  width: 1160px;
+  margin: 0 auto;
+  grid-template-columns: 280px 280px 280px 280px;
+  place-items: center;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
