@@ -1,0 +1,183 @@
+.App .most-wanted-container-mobile {
+  width: 80%;
+  border-radius: 10px;
+  background: white;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position: relative;
+  transition: ease 0.5s all;
+  padding-bottom: 40px;
+}
+
+.App .most-wanted-container-mobile:hover {
+  border: solid blue 2px;
+}
+
+.App .most-wanted-container-mobile .pointy-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+.App .most-wanted-container-mobile .pointy-container .pointy-box1 {
+  background: #F6F6F6;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 10px;
+  color: #0033C6;
+  margin-right: 0;
+  border-radius: 10px 0 0 10px;
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.App .most-wanted-container-mobile .pointy-container .pointy-box2 {
+  width: 0;
+  height: 0;
+  border-left: solid #F6F6F6 50px;
+  border-top: solid transparent 210px;
+  border-bottom: solid transparent 210px;
+}
+
+.App .most-wanted-container-mobile .mwcar-container {
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  right: 30px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
+  left: 35%;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div .fas {
+  transition: 0.3s ease all;
+  color: rgb(207, 207, 207);
+  font-size: 40px;
+}
+
+.App .most-wanted-container-mobile:hover .mwcar-arrow-div .fas {
+  color: #0033C6;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .slick-dots-container {
+  position: absolute;
+  display: flex;
+  right: 30px;
+  bottom: 20px;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .slick-dots-container .dot-item {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  background: #f5f5f5;
+  border: solid rgb(139, 139, 139) 1px;
+  border-radius: 50%;
+  margin-left: 20px;
+  transition: ease all 0.3s;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  transition: 0.3s ease all;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item {
+  display: block;
+  place-items: center;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
+  width: 300px;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content {
+  margin-left: 50px;
+  width: 350px;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content span {
+  font-size: 25px;
+  color: #575757;
+  word-wrap: break-word;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 10px;
+  color: #707070;
+  text-decoration: line-through;
+}
+
+.App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item .mwcar-content p:nth-child(3) {
+  font-size: 25px;
+  color: #0033C6;
+  font-weight: 800;
+  margin-top: 0px;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  
+  .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
+    width: 0;
+    height: 0;
+    border-left: solid #F6F6F6 50px;
+    border-top: solid transparent 150px;
+    border-bottom: solid transparent 150px;
+  }
+  
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-slider .mwcar-item img {
+    width: 200px;
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 740px) {
+  .App .most-wanted-container-mobile .pointy-container {
+    display: block;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  .App .most-wanted-container-mobile .pointy-container .pointy-box1 {
+      margin: 0;
+      border-radius: 10px 10px 0 0;
+      padding: 10px 0;
+  }
+
+  .App .most-wanted-container-mobile .pointy-container .pointy-box2 {
+    display: none;
+  }
+
+  .App .most-wanted-container-mobile {
+    display: block;
+  }
+
+  .App .most-wanted-container-mobile .mwcar-container .mwcar-arrow-div:nth-child(2) {
+    left: 30px;
+  }
+}
