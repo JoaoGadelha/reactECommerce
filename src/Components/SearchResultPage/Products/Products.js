@@ -94,7 +94,6 @@ const Products = (props) => {
     }
 
 
-    if (searchResult.length !== 0 && Array.isArray(searchResult)) {
         return (
             <div className='products-container'>
                 <h1>Search Results</h1>
@@ -103,15 +102,7 @@ const Products = (props) => {
                 </div>
             </div>
         )
-    } else {
-        return (
-            <div className='products-container'>
-                <h1>Search Results</h1>
-                <h2 style={{ textAlign: 'center', fontSize: '30px' }}>Your search has returned no results</h2>
-            </div>
-        );
-    }
-
+    
 }
 
 export default Products

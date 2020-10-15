@@ -1,101 +1,100 @@
 .App header .header-row-3 .grid-container{
-    background-color:#235AC6;
-    padding:10px 0;
-    display:grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    place-items:center;
-    text-align:center;
-    border-bottom:4px solid #EE483B;
-    position:relative;
-    margin: 0 auto;
-    margin-top:10px;
-    font-weight:bold;
-  
-  }
-  
-  .App header .header-row-3 .grid-container .grid-item{
-    height:100%;
-    width:100%;
-    display:grid;
-    place-items:center;
-    font-size:11px;
-  }
-  
-  .App header .header-row-3 .grid-container .grid-item1{
-    font-size:16px;
+  background-color:#235AC6;
+  padding:10px 0;
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  place-items:center;
+  text-align:center;
+  border-bottom:4px solid #EE483B;
   position:relative;
-  }
-  
-  .App header .header-row-3 .grid-container a {
-    color:white;
-  }
-  
-  
-  .App header .header-row-3 .grid-container .ddw1 {
-    display:none;
-    position:absolute;
-    top:28px;
-    left:0;
-   }
-  
-   .App header .header-row-3 .grid-container .ddw2 {
-    display:none;
-    position:absolute;
-    top:38px;
-    left:240px;
-   }
-  
-   .App header .header-row-3 .grid-container .dropdown-wrapper * {
-     color:#235AC6;
-     line-height: 20px;
-   }
-  
-  .App header .header-row-3 .grid-container .grid-item1:hover .ddw1, .App header .header-row-3 .grid-container .grid-item2:hover .ddw2 {
-    display:block;
-  }
-  
-  .App header .header-row-3 .grid-container .dropdown-content {  
-    position:relative;
-    border:1px solid gray;
-    background-color:#F7F7F7;
-    border-radius:5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index:2;
-  }
-  
-  .App header .header-row-3 .grid-container .ddc1 {
-    margin-left:10px;
-    padding:10px;
-    top:13px;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width:800px;
-  }
-  
-  .App header .header-row-3 .grid-container .ddc2 {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    top:13px;
-    
-  }
-  
-  .App header .header-row-3 .grid-container .dropdown-content::before {
-  content:'';
+  margin: 0 auto;
+  margin-top:10px;
+  font-weight:bold;
+
+}
+
+.App header .header-row-3 .grid-container .grid-item{
+  height:100%;
+  width:100%;
+  display:grid;
+  place-items:center;
+  font-size:11px;
+}
+
+.App header .header-row-3 .grid-container .grid-item1{
+  font-size:16px;
+position:relative;
+}
+
+.App header .header-row-3 .grid-container a {
+  color:white;
+}
+
+
+.App header .header-row-3 .grid-container .ddw1 {
+  display:none;
   position:absolute;
-  border:10px solid;
-  border-color: transparent transparent white transparent;
-  top:-1.2rem;
-  left:3rem;
-  }
-  
-  .App header .header-row-3 .grid-container .ddc1 h3, .App header .header-row-3 .grid-container .ddc2 h3 {
-    grid-column: 1/4;
-    justify-self:start;
-    margin-left:20px;
-  }
-  
-  .App header .header-row-3 .grid-container .dropdown-content ul {
-    list-style-type:none;
-    font-size:16px;
-    text-align:left;
-  }
+  top:28px;
+  left:0;
+ }
+
+ .App header .header-row-3 .grid-container .ddw2 {
+  display:none;
+  position:absolute;
+  top:38px;
+  left:240px;
+ }
+
+ .App header .header-row-3 .grid-container .dropdown-wrapper * {
+   color:#235AC6;
+   line-height: 20px;
+ }
+
+.App header .header-row-3 .grid-container .grid-item1:hover .ddw1, .App header .header-row-3 .grid-container .grid-item2:hover .ddw2 {
+  display:block;
+}
+
+.App header .header-row-3 .grid-container .dropdown-content {  
+  position:relative;
+  border:1px solid gray;
+  background-color:#F7F7F7;
+  border-radius:5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index:2;
+}
+
+.App header .header-row-3 .grid-container .ddc1 {
+  margin-left:10px;
+  padding:10px;
+  top:13px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width:800px;
+}
+
+.App header .header-row-3 .grid-container .ddc2 {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  top:13px;
+}
+
+.App header .header-row-3 .grid-container .dropdown-content::before {
+content:'';
+position:absolute;
+border:10px solid;
+border-color: transparent transparent white transparent;
+top:-1.2rem;
+left:3rem;
+}
+
+.App header .header-row-3 .grid-container .ddc1 h3, .App header .header-row-3 .grid-container .ddc2 h3 {
+  grid-column: 1/4;
+  justify-self:start;
+  margin-left:20px;
+}
+
+.App header .header-row-3 .grid-container .dropdown-content ul {
+  list-style-type:none;
+  font-size:16px;
+  text-align:left;
+}

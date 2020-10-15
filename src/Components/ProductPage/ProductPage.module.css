@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     width: 80%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 
@@ -13,7 +14,14 @@
 .container  .mainImage {
     max-width: 80%;
     margin: 0 auto;
-    max-height: 430px;
+    max-height: 380px;
+}
+
+.title {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .container .content {

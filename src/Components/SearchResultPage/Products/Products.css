@@ -2,8 +2,7 @@
 .App .products-container h1{
     font-size: 30px;
     color: #004a9d;
-    margin-left: 120px;
-    margin-bottom: 10px;
+        margin-bottom: 10px;
   }
   
   .App .products-container button{

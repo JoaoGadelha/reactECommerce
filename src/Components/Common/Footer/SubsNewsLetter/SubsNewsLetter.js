@@ -14,7 +14,6 @@ const SubsNewsLetter = () => {
          </div>
       </div>
    )
-
 }
 
 export default SubsNewsLetter

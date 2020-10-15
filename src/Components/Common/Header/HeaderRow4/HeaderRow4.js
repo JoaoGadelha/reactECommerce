@@ -4,13 +4,13 @@ import './HeaderRow4.css'
 const HeaderRow4 = () => {
     return (
         <div className='header-row-4'>
-            <a href='www.google.com'>banQi</a>
-            <a href='www.google.com'>Free freight</a>
-            <a href='www.google.com'>Call me on Zap!</a>
-            <a href='www.google.com'>Buy with a coupon</a>
-            <a href='www.google.com'>Download the APP</a>
-            <a href='www.google.com'>#StayWellAtHome</a>
-            <a href='www.google.com'>Emergency Help</a>
+            <a href=''>banQi</a>
+            <a href=''>Free freight</a>
+            <a href=''>Call me on Zap!</a>
+            <a href=''>Buy with a coupon</a>
+            <a href=''>Download the APP</a>
+            <a href=''>#StayWellAtHome</a>
+            <a href=''>Emergency Help</a>
         </div>
     )
 }
