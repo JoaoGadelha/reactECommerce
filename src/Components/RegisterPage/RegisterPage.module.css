@@ -1,0 +1,103 @@
+body {
+    background: white;
+}
+
+.container {
+    background: white;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo span:nth-child(1) {
+    color: #235AC6;
+}
+
+.logo span:nth-child(2) {
+    color: red;
+}
+
+.header {
+    height: 80px;
+    background: #F7F7F7;
+}
+
+.header .headerRow1 {
+    background: #235AC6;
+    height: 12px;
+}
+
+.header .headerRow2 {
+    background: red;
+    height: 3px;
+}
+
+.header .headerRow3 {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.firstLink, .secondLink, .thirdLink {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.firstLink span, .secondLink span, .thirdLink span {
+margin-left: 10px;
+}
+
+.pseudoForm {
+    display: grid;
+    width: 30%;
+    margin: 0 auto;
+}
+
+input {
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.createBtn {
+    width: 200px;
+    height: 50px;
+    background: rgb(0, 51, 198);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.signinBtn {
+    width: 200px;
+    height: 50px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: solid 1px black;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}

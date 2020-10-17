@@ -1,0 +1,72 @@
+
+/* Carousel1 ----------------------------------------------------------------------*/
+
+
+.App .carousel1-container .carousel1-slider {
+    display:flex;
+    width:100%;  
+    position: relative;
+    align-items:center;
+  }
+  
+  
+  .App .carousel1-container .carousel1-slider img {
+    width:100%;
+    height:auto;
+    display:none;
+  }
+  
+  .App .carousel1-container .carousel1-slider .current {
+    display:block;
+  }
+  
+  .App .carousel1-container .fas {
+    color:red;
+    font-size:50px;
+    cursor: pointer;
+    position:absolute;
+    left:13px;
+    transition:transform 0.3s ease;
+  }
+  
+  .App .carousel1-container .fas:hover {
+    transform: scale(1.3);
+  }
+  
+  .App .carousel1-container .fas.fa-chevron-circle-right {
+    right:13px;
+    left:auto;
+  }
+  
+  .App .carousel1-container .carousel1-slider .slick-dots-wrapper {
+    position:absolute;
+    left: 50%;
+    bottom: -30px;
+    font-size:20px;
+    height:16px;
+  }
+  
+  .App .carousel1-container .carousel1-slider .slick-dots-container {
+    position:relative;
+    display:flex;
+    left: -50%;
+    height:100%;
+  }
+  
+  .App .carousel1-container .carousel1-slider .slick-dots-container .slick-dot-item {
+    margin-left:20px;
+    border:0;
+    height:13px;
+    width:13px;
+    border-radius:20px;
+    background-color:rgb(177, 177, 177);
+    cursor: pointer;
+    outline:none;
+    transition: all ease 0.5s;
+  }
+  
+  .App .carousel1-container .carousel1-slider .slick-dots-container .slick-dot-item.current {
+    background-color:#235AC6;
+    height:16px;
+    width:16px;
+  }

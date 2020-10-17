@@ -1,0 +1,19 @@
+.container {
+    grid-column: span 5;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+
+.btnCont * {
+    display: block;
+}
+
+.prodQnt { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+        place-items: center;
+    
+}

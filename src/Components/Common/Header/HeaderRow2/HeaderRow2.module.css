@@ -1,0 +1,87 @@
+ .container {
+   display: grid;
+   grid-template-columns: 3fr 5fr 2fr 1fr;
+ }
+
+.logoContainer {
+  text-decoration:none;
+  text-align:center;
+}
+
+ .logoContainer * {
+   font-size: 30px;
+   font-weight: bolder;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+.logoContainer span:nth-child(1){
+  color:#2B78F8;
+}
+
+.logoContainer span:nth-child(2){
+  color:red;
+}
+
+ .container img {
+   width: 300px;
+   height: auto;
+   justify-self:center;
+   display:block;
+   margin-left: 20px;
+ }
+
+ .container form {
+   border: solid 1px rgb(94, 94, 94);
+   padding: 10px;
+   border-radius: 10px;
+   display: inline-block;
+   position: relative;
+   background-color: white;
+   justify-self: end;
+   width: 80%;
+   margin: 0 auto;
+ }
+
+ .container form i {
+   color: rgb(131, 131, 131);
+   position: absolute;
+   right: 10px;
+   font-size: 20px;
+ }
+
+ .container input {
+   width: 80%;
+   border: 0;
+   height: 100%;
+   margin:0;
+   
+ }
+
+ .container input:focus {
+   outline: none;
+ }
+
+ .container span i, .container i {
+   color: #235AC6;
+   margin-left: 5%;
+   font-size: 40px;
+ }
+
+ .loginLink {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   justify-items: center;
+ }
+
+.login {
+  justify-self:start;
+}
+
+ .login * {
+   display: block;
+   text-align: center;
+ }
+
+ .login strong {
+   letter-spacing:1px;
+ }
