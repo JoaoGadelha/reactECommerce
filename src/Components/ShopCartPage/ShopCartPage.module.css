@@ -1,0 +1,76 @@
+.Link {
+    text-decoration: none;
+}
+.logo span {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo span:nth-child(1) {
+    color: #235AC6;
+}
+
+.logo span:nth-child(2) {
+    color: red;
+}
+
+.header {
+    
+    height: 80px;
+    background: #F7F7F7;
+}
+
+.header .headerRow1 {
+    background: #235AC6;
+    height: 12px;
+}
+
+.header .headerRow2 {
+    background: red;
+    height: 3px;
+}
+
+.header .headerRow3 {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.firstLink, .secondLink, .thirdLink {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.firstLink span, .secondLink span, .thirdLink span {
+margin-left: 10px;
+}
+
+
+.container img {
+    width: 60px;
+    height: 60px;
+}
+
+.container h1 {
+    margin: 0;
+}
+
+.columnTitles {
+    margin-top: 50px;
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.qtnTitle {
+    width: 130px;
+}
+
+.prodTitle {
+    width: 270px;
+}

@@ -1,0 +1,156 @@
+
+.App .carousel2-wrapper {
+    width:1160px;
+    margin:0 auto;
+    margin-top:50px;
+    overflow:hidden;
+    position: relative;
+    background:white;
+    border-radius:10px;
+    padding-top:20px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container {
+    overflow:hidden;
+    width:1000px;
+    position:relative;
+    margin:0 auto;
+    padding-bottom: 30px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 {
+    display:flex;
+    transition: ease all 1s;
+    margin:0 100px;
+    position:relative;
+    left:-100px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item {
+    text-align:center;
+    opacity:0;
+    width:250px;
+    max-height:480px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item.visible {
+    opacity:1;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item img {
+    height:40%;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content  {
+    text-decoration:none;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content > * {
+    min-height: 20px;
+  }
+  
+  /*
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content a > * {
+    min-height:20px;
+    width:80%;
+    margin:0 auto;
+    text-align:left;
+  }*/
+  
+  .App .carousel2-wrapper .fas {
+    color:blue;
+    font-size:30px;
+    position:absolute;
+    top:45%;
+    cursor: pointer;
+    left: 20px;
+  }
+  
+  .App .carousel2-wrapper  .fas.fa-chevron-circle-right {
+    left:auto;
+    right:20px;
+  }
+  
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .product-details {
+    width:80%;
+    margin-top:20px;
+    text-align:left;
+    color:black;
+    min-height:88px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .old-price {
+    color:black;
+    margin-top:30px;
+    font-size:13px;
+    text-align:left;
+    font-weight: bold;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .old-price span {
+    text-decoration:line-through;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .actual-price {
+    font-size:30px;
+    text-align:left;
+    font-weight: bold;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2 .carousel2-item .content .installment {
+    text-align:left;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container {
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    font-size:28px;
+    place-items:center;
+    text-align:center;
+    margin-bottom:50px;
+    font-weight:bold;
+    color:#0033C6;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(1) {
+    display:grid;
+    grid-template-rows:1fr 1fr
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(1) span:nth-child(1){
+    font-size:40px;
+    margin-bottom:10px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(1) span:nth-child(2) {
+    font-size:20px;
+    color:black;
+    }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div {
+  position:relative;
+  line-height:30px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(2)::before{
+    content: '';
+      width: 34px;
+      height: 100%;
+      background: url('https://static.chaordicsystems.com/static/casasbahia/v0.0.105/src/images/countdown.svg') center no-repeat;
+      position: absolute;
+      top: 0;
+      left: -40px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(2) span {
+    font-size:40px;
+  }
+  
+  .App .carousel2-wrapper .carousel2-container .carousel2-deadline-container div:nth-child(2) p {
+    font-size:13px;
+    color:black;
+    margin:0;
+  }
+  

@@ -1,0 +1,58 @@
+.container {
+    grid-column: span 5;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.inputQuantity {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.btnCont * {
+    display: block;
+}
+
+.prodQnt { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+        place-items: center;
+    
+}
+
+.btnMore, .btnLess {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    border:none;
+    height: 20px;
+    width: 20px;
+border-radius: 5px;
+font-weight: bold;
+transition: ease all 0.5s;
+background: white;
+}
+
+.btnMore:hover, .btnLess:hover {
+background: #235AC6;
+color: white;
+}
+
+.removeBtn {
+    background: #235AC6;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: ease all 0.5s;
+    font-size: 20px;
+}
+
+.removeBtn:hover {
+    color: black;
+    background: white;
+}
