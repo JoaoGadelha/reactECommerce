@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Context } from '../../Context'
 import styles from './ProductPage.module.css';
 
+
 const ProductPage = ({ match }) => {
     let renderOldPrice;
     let [mainImage, setMainImage] = useState('');
@@ -9,7 +10,6 @@ const ProductPage = ({ match }) => {
     let [productInfo, setProductInfo] = useState([]);
 
     useEffect(() => {
-
         fetch('https://api-do-joao.herokuapp.com/find/id/' + match.params.id).then(res => res.json()).then(res => setProductInfo(res));
         renderOldPrice = true;
     }, []);
