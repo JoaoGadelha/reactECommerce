@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { Context } from '../../Context'
 import styles from './RegisterPage.module.css'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useHistory } from "react-router-dom";
 
 const RegisterPage = () => {
     let [name, setName] = useState('');
     let [pw, setPw] = useState('');
     let [pw2, setPw2] = useState('');
     let [email, setEmail] = useState('');
-
-
-
-
+    let { saveProduct, setUserId } = useContext(Context);
+    const history = useHistory();
 
     async function postData(url = '', data = {}) {
         // Default options are marked with *
@@ -28,24 +27,24 @@ const RegisterPage = () => {
     }
 
     return (
-        <div class={styles.container}>
-            <div class={styles.header}>
-                <div class={styles.headerRow1}></div>
-                <div class={styles.headerRow2}></div>
-                <div class={styles.headerRow3}>
-                    <div class={styles.logo}>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <div className={styles.headerRow1}></div>
+                <div className={styles.headerRow2}></div>
+                <div className={styles.headerRow3}>
+                    <div className={styles.logo}>
                         <span>ELECTRO</span><span>SHOPPING</span>
                     </div>
-                    <a href='' class={styles.firstLink}><i class="far fa-comments"></i>
+                    <a href='' className={styles.firstLink}><i className="far fa-comments"></i>
                         <span>Call Center</span></a>
-                    <a href='' class={styles.secondLink}><i class="fas fa-box"></i>
+                    <a href='' className={styles.secondLink}><i className="fas fa-box"></i>
                         <span>My orders</span></a>
-                    <a href='' class={styles.thirdLink}><i class="fas fa-dollar-sign"></i>
+                    <a href='' className={styles.thirdLink}><i className="fas fa-dollar-sign"></i>
                         <span>Our latest offers</span></a>
                 </div>
             </div>
-            <div class={styles.pseudoForm}>
-            <h1>Create your account</h1>
+            <div className={styles.pseudoForm}>
+                <h1>Create your account</h1>
                 <input placeholder='First and last names' onChange={(event) => {
                     event.preventDefault();
                     setName(event.target.value);
@@ -62,15 +61,21 @@ const RegisterPage = () => {
                     event.preventDefault();
                     setPw2(event.target.value);
                 }}></input>
-                <button class={styles.createBtn} onClick={() => {
-                    let originalData = { name: name, password: pw, password2: pw2, email: email };
-                    postData('https://electroshopping-user-regist.herokuapp.com/register', originalData)
-                        .then(data => {
-                            console.log(data); // JSON data parsed by `data.json()` call
-                        });
+                <button className={styles.createBtn} onClick={async () => {
+                    let originalData = { name: name, password: pw, password2: pw2, email: email, saveProduct: saveProduct };
+                    let data = await postData('https://electroshopping-user-regist.herokuapp.com/signup', originalData);
+                    console.log(saveProduct);
+                    if (data.message === 'success') {
+                        setUserId(data.userId);
+                        if (Object.keys(saveProduct).length > 0) {
+                            history.push('/shopcart');
+                        } else {
+                            history.push('/');
+                        }
+                    }
                 }}>Create account </button>
                 <h1>Already have an account ?</h1>
-                <Link to='/login' class={styles.Link}><div class={styles.signinBtn}>Sign in</div></Link>
+                <Link to='/login' className={styles.Link}><div className={styles.signinBtn}>Sign in</div></Link>
             </div>
         </div>
     )

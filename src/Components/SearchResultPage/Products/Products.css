@@ -3,6 +3,7 @@
     font-size: 30px;
     color: #004a9d;
         margin-bottom: 10px;
+        
   }
   
   .App .products-container button{
@@ -57,7 +58,14 @@
     color: #004a9d;
   }
   
+  .App .products-container .products-grid .product-item span:nth-child(2) {
+        margin-top: 20px;
+        min-height: 48px;
+    
+  }
+
   .App .products-container .products-grid .product-item span:nth-child(3) {
+    min-height: 24px;
     font-size: 16px;
     text-decoration: line-through;
     color: #666666;

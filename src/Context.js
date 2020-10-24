@@ -8,8 +8,7 @@ export const Provider = (props) => {
   let [searchResult, setSearchResult] = useState([]);
   let [currentProduct, setCurrentProduct] = useState({});
   let [userId, setUserId] = useState('');
-  //let apiKey = "B72D4C4480C347D8B9B82F07AD623FBE"; // Remove api key from here. This is not safe.
-  let apiKey = 'E1037F0020A144018FC111B6011BE147';
+  let [saveProduct, setSaveProduct] = useState({});
   let [shopCart, setShopCart] = useState([]);
   let [firstRender, setFirstRender] = useState(true);
 
@@ -27,8 +26,8 @@ export const Provider = (props) => {
   return (
     <Context.Provider value={{
       searchResult, setSearchResult,
-      currentProduct, setCurrentProduct, apiKey,
-      userId, setUserId, shopCart, setShopCart
+      currentProduct, setCurrentProduct,
+      userId, setUserId, shopCart, setShopCart, saveProduct, setSaveProduct
     }}>
       {props.children}
     </Context.Provider>

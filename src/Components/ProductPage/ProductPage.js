@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Context } from '../../Context'
 import styles from './ProductPage.module.css';
+import { Redirect } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
+import { postData } from '../Common/CommonFunctions'
 
 
 const ProductPage = ({ match }) => {
@@ -8,6 +11,8 @@ const ProductPage = ({ match }) => {
     let [mainImage, setMainImage] = useState('');
     let [isRender1, setIsRender1] = useState(true);
     let [productInfo, setProductInfo] = useState([]);
+    let { userId, saveProduct, setSaveProduct } = useContext(Context);
+    const history = useHistory();
 
     useEffect(() => {
         fetch('https://api-do-joao.herokuapp.com/find/id/' + match.params.id).then(res => res.json()).then(res => setProductInfo(res));
@@ -22,6 +27,19 @@ const ProductPage = ({ match }) => {
         }
         setIsRender1(false);
     }, [productInfo])
+
+    const redirect = async () => {
+        console.log(userId);
+        if (userId === '') {
+            setSaveProduct({ quantity: 1, id: match.params.id });
+            history.push("/signup");
+        } else {
+
+            console.log(match.params.id);
+            await postData('https://electroshopping-user-regist.herokuapp.com/setShopCart', { quantity: 1, id: match.params.id, userId:userId });
+            history.push("/shopcart");
+        }
+    }
 
     const changeImage = (imageIndex) => {
         console.log('changeImage');
@@ -53,7 +71,7 @@ const ProductPage = ({ match }) => {
                             </div>
                             <span className={styles.price}>$ {productInfo[0].price}</span>
                         </div>
-                        <button className={styles.addCartBtn}>Add to Cart</button>
+                        <button className={styles.addCartBtn} onClick={redirect}>Add to Cart</button>
                     </div>
                 </div>
                 <div className={styles.imagesContainer}>

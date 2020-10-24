@@ -6,24 +6,30 @@ import { postData } from '../../Common/CommonFunctions'
 const CartItem = (props) => {
     let { shopCart, setShopCart } = useContext(Context);
     let product = props.product;
-    let [quantState, setQuantState] = useState(parseInt(product.quantity, 10));
+    let userId = props.userId;
+    let [quantState, setQuantState] = useState(parseInt(product['quantity'], 10));
+
+    useEffect(() => {
+        console.log('hello');
+        console.log(quantState, product.id, userId);
+        updateCart();
+    }, [quantState]);
 
     let updateCart = async () => {
-        const data = await postData(`https://electroshopping-user-regist.herokuapp.com/setShopCart`, { quantCart: quantState });
+        const data = await postData(`https://electroshopping-user-regist.herokuapp.com/setShopCart`, { quantity: quantState, id: product.id, userId: userId });
     }
-    
+
     const onChange = (e) => {
         e.preventDefault();
         setQuantState(parseInt(e.target.value, 10));
     }
-    const increase = async (id) => {
-        shopCart.forEach(async (el, i) => {
+    const increase = (id) => {
+        shopCart.forEach((el, i) => {
             if (el.id === id) {
                 let aux = [...shopCart];
                 aux[i].quantity = aux[i].quantity + 1;
-                await setShopCart(aux);
-                await setQuantState(prev => prev + 1);
-                await updateCart();
+                setShopCart(aux);
+                setQuantState(prev => prev + 1);
             }
         }
         )
@@ -35,26 +41,26 @@ const CartItem = (props) => {
                 let aux = [...shopCart];
                 if (aux[i].quantity > 1) {
                     aux[i].quantity = aux[i].quantity - 1;
-                    await setShopCart(aux);
-                    await setQuantState(prev => prev - 1);
+                    setShopCart(aux);
+                    setQuantState(prev => prev - 1);
                 } else {
+                    await setQuantState(0);
                     aux.splice(i, 1);
                     await setShopCart(aux);
-                    await setQuantState(0);
                 }
-                await updateCart();
             }
         }
         )
     }
 
     const remove = async (element) => {
-        shopCart.forEach( async (el, i) => {
+        shopCart.forEach(async (el, i) => {
             if (el.id === element) {
                 let aux = [...shopCart];
                 aux.splice(i, 1);
+                console.log(aux);
+                await setQuantState(0);
                 await setShopCart(aux);
-                updateCart();
             }
         })
     }

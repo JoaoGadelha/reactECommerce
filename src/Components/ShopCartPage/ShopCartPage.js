@@ -60,7 +60,7 @@ const ShopCartPage = () => {
                 <h1>Total price</h1>
                 <div></div>
                 {
-                    shopCart.map((product, i, array) => <CartItem key={product.id} product={product} index={i} array={array} />)
+                    shopCart.map((product, i, array) => <CartItem key={product.id} product={product} index={i} array={array} userId={userId}/>)
                 }
                 </div>
         </div>
