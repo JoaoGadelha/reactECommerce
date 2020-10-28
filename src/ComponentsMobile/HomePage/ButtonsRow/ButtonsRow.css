@@ -1,6 +1,7 @@
 .buttons-row {
     background: #EBEBEB;
     width: 100%;
+    
 }
 
 .buttons-row .grid {
@@ -17,6 +18,7 @@
 
 .grid > * {
     height: 18vh;
+    max-height: 18vh;
     border-radius: 10px;
     width: 22vw;
     background: white;

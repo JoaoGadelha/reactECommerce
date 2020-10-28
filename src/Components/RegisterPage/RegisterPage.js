@@ -62,7 +62,12 @@ const RegisterPage = () => {
                     setPw2(event.target.value);
                 }}></input>
                 <button className={styles.createBtn} onClick={async () => {
-                    let originalData = { name: name, password: pw, password2: pw2, email: email, saveProduct: saveProduct };
+                    let originalData;
+                    if (Object.keys(saveProduct).length !== 0) {
+                        originalData = { name: name, password: pw, password2: pw2, email: email, saveProduct: saveProduct };
+                    } else {
+                        originalData = { name: name, password: pw, password2: pw2, email: email, saveProduct: '' };
+                    }
                     let data = await postData('https://electroshopping-user-regist.herokuapp.com/signup', originalData);
                     console.log(saveProduct);
                     if (data.message === 'success') {

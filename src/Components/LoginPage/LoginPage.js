@@ -6,8 +6,8 @@ import { Context } from '../../Context'
 
 const LoginPage = () => {
 
-    let [email, setEmail] = useState('fnel@yahoo.com');
-    let [pw, setPw] = useState('12345');
+    let [email, setEmail] = useState('');
+    let [pw, setPw] = useState('');
     let { userId, setUserId, saveProduct } = useContext(Context);
 
 
@@ -47,8 +47,8 @@ const LoginPage = () => {
                 <input placeholder='E-mail address' onChange={(event) => {
                     event.preventDefault();
                     setEmail(event.target.value);
-                }} value='fnel@yahoo.com'></input>
-                <input placeholder='Password' value='12345' onChange={(event) => {
+                }} value={email}></input>
+                <input placeholder='Password' value={pw} onChange={(event) => {
                     event.preventDefault();
                     setPw(event.target.value);
                 }}></input>

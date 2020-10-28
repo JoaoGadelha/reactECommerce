@@ -26,8 +26,9 @@
 }
 
 .app-ad-mobile span {
-  font-size: 25px;
+  font-size: 20px;
   color: #575757;
+  text-align: center;
 }
 
 .app-ad-mobile button {

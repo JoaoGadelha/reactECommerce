@@ -19,6 +19,7 @@
     place-items: center;
     width: 100%;
     margin-top: 20px;
+    
 }
 
 .header .imgContainer div:first-child {
@@ -39,6 +40,7 @@
     grid-template-columns: 1fr 1fr;
     width: 100%;
     place-items: center;
+    margin-right: 30px;
     
 }
 
