@@ -17,8 +17,7 @@
 }
 
 .grid > * {
-    height: 18vh;
-    max-height: 18vh;
+    height: 100px;
     border-radius: 10px;
     width: 22vw;
     background: white;
@@ -38,7 +37,7 @@
 .grid > * > span {
     margin: 0 20px;
     margin-bottom: 13px;
-    font-size: 15px;
+    font-size: 13px;
     color: #2d5bc9;
     font-weight: bold;
     
