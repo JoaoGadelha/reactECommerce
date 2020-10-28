@@ -3,7 +3,7 @@
     border-top: solid blue 5px;
     position: relative;
     background: #f7f7f7;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .header::before {
@@ -19,7 +19,6 @@
     place-items: center;
     width: 100%;
     margin-top: 20px;
-    
 }
 
 .header .imgContainer div:first-child {
@@ -32,6 +31,7 @@
     justify-self: end;
     height: 30px;
     margin-left: 50px;
+    padding: 20px;
 }
 
 .header .imgContainer div:nth-child(2) {
@@ -41,7 +41,6 @@
     width: 100%;
     place-items: center;
     margin-right: 30px;
-    
 }
 
 .header .imgContainer div:nth-child(2) img:nth-child(1) {

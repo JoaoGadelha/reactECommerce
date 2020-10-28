@@ -16,8 +16,12 @@ const Footer = () => {
                 <h5>
                     Other regions:<span> (266) 855-0710</span>
                 </h5>
-                <h5><img src={'https://m.casasbahia.com.br/assets/images/ic-new-seta-direita.svg'}></img>Customer service</h5>
-                <h5><img src={'https://m.casasbahia.com.br/assets/images/ic-new-seta-direita.svg'}></img>Most search brands and products</h5>
+                <div className='footerLink'>
+                    <img src={'https://m.casasbahia.com.br/assets/images/ic-new-seta-direita.svg'}></img> <h5>Customer service</h5>
+                </div>
+                <div className='footerLink'>
+                    <img src={'https://m.casasbahia.com.br/assets/images/ic-new-seta-direita.svg'}></img><h5>Most search brands and products</h5>
+                </div>
             </div>
         </div>
     )

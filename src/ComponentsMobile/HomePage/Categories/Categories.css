@@ -69,8 +69,8 @@
  .App .categories-wrapper-mobile .categories-container-mobile .categories-item-mobile:nth-child(6) a {
   background: url('categories_img/img6') center center/cover no-repeat;
   border-radius: 50%;
-  background-position-y: 40px;
-  background-size: 250px;
+  background-position-y: 22px;
+  background-size: 150px;
   background-color: #F0EEEF;
  }
 
