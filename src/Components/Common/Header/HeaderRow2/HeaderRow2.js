@@ -3,12 +3,14 @@ import styles from "./HeaderRow2.module.css";
 import { Context } from "../../../../Context";
 import { Link, useHistory } from "react-router-dom";
 import { postData } from '../../CommonFunctions'
+import './HeaderRow2.css'
 
 const HeaderRow2 = () => {
-  let { setSearchResult, userId } = useContext(Context);
+  let { setSearchResult, userId, setIsLoading } = useContext(Context);
   let [inputState, setInputState] = useState("");
   let [clientName, setClientName] = useState('');
   let [isRender1, setIsRender1] = useState(true);
+
 
   useEffect(() => {
     (async () => {
@@ -28,15 +30,26 @@ const HeaderRow2 = () => {
     setInputState(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    fetch(`https://api-do-joao.herokuapp.com/find/type/${inputState}`)
-      .then((resp) => resp.json())
-      .then((resp) => {
-        setSearchResult(resp);
-      });
+    await setIsLoading(true);
+    let fetchFun = await fetch(`https://api-do-joao.herokuapp.com/find/type/${inputState}`)
+    let json = await fetchFun.json();
+    await setSearchResult(json);
+    await setIsLoading(false);
     history.push("/search");
   };
+
+  const onClickSearchBar = () => {
+    document.getElementsByClassName('instructionsSearchBar')[0].style.display = 'block';
+    document.getElementsByClassName('formSearchBar')[0].addEventListener('submit', () => {
+      document.getElementsByClassName('instructionsSearchBar')[0].style.display = 'none';
+    })
+  }
+
+  const okButton = () => {
+    document.getElementsByClassName('instructionsSearchBar')[0].style.display = 'none';
+  }
 
   return (
     <div className={styles.container}>
@@ -47,14 +60,36 @@ const HeaderRow2 = () => {
         </div>
       </Link>
 
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className='formSearchBar' >
         <input
           placeholder="What are you looking for ?"
           value={inputState}
           onChange={onChange}
-        ></input>
+          className={styles.searchBar}
+          onClick={onClickSearchBar}></input>
         <i className="fas fa-search" onClick={onSubmit}></i>
       </form>
+
+      <div className='instructionsSearchBar'>
+        <>You can search for:
+        <ul>
+            <li>
+              bed
+          </li><li>
+              chair
+          </li><li>
+              tv
+          </li><li>
+              table
+          </li><li>
+              phone
+          </li><li>
+              misc
+          </li>
+          </ul>
+          <button onClick={okButton}>OK</button>
+        </>
+      </div>
       {userId === '' ?
         <Link to="/signup" className={styles.loginLink}>
           <i className="fas fa-user"></i>

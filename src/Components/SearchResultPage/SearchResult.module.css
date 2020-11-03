@@ -1,0 +1,13 @@
+.loadingGif {
+    margin: 0 auto;
+    display: block;
+}
+
+.emptyMsg {
+    text-align: 'center';
+    font-size: '30px';
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}

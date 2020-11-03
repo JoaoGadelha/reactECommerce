@@ -1,0 +1,24 @@
+
+ .instructionsSearchBar {
+     background: white;
+     border: black 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1000;
+    left: 500px;
+    width: 200px;
+    top: 100px;
+    display: none;
+    padding-bottom: 60px;
+  }
+
+  .instructionsSearchBar button {
+      margin: 0 auto;
+      background: red;
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      left: 80px;
+  }

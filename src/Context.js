@@ -11,6 +11,7 @@ export const Provider = (props) => {
   let [saveProduct, setSaveProduct] = useState({});
   let [shopCart, setShopCart] = useState([]);
   let [firstRender, setFirstRender] = useState(true);
+  let [isLoading, setIsLoading] = useState(false);
 
 
 
@@ -27,8 +28,8 @@ export const Provider = (props) => {
     <Context.Provider value={{
       searchResult, setSearchResult,
       currentProduct, setCurrentProduct,
-      userId, setUserId, shopCart, setShopCart, saveProduct, setSaveProduct
-    }}>
+      userId, setUserId, shopCart, setShopCart, saveProduct, setSaveProduct,
+   isLoading, setIsLoading }}>
       {props.children}
     </Context.Provider>
   );
