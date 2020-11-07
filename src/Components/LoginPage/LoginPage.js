@@ -31,9 +31,11 @@ const LoginPage = () => {
                 <div className={styles.headerRow1}></div>
                 <div className={styles.headerRow2}></div>
                 <div className={styles.headerRow3}>
-                    <div className={styles.logo}>
-                        <span>ELECTRO</span><span>SHOPPING</span>
-                    </div>
+                    <Link to="/" className={styles.Link}>
+                        <div className={styles.logo}>
+                            <span>ELECTRO</span><span>SHOPPING</span>
+                        </div>
+                    </Link>
                     <a href='' className={styles.firstLink}><i className="far fa-comments"></i>
                         <span>Call Center</span></a>
                     <a href='' className={styles.secondLink}><i className="fas fa-box"></i>

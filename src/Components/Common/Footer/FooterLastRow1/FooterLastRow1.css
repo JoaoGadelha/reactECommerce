@@ -5,6 +5,7 @@
     grid-template-columns: 450px 900px;
     width: 1350px;
     place-items: center;
+    
   }
   
   .App .footer-container .footer-lr1-container > * {
@@ -53,6 +54,7 @@
     background: url(https://www.casasbahia-imagens.com.br/App_Themes/CasasBahia/img/footer/icon-youtube.svg) no-repeat #575757 7px 9px;
     width:30px;
     height:30px;
+    
   }
   
   .App .footer-container .footer-lr1-container div:nth-child(2) .payment-container {
@@ -70,4 +72,5 @@
   
   .App .footer-container .footer-lr1-container div:nth-child(2) .payment-container  img {
     margin-right: 10px;
+    height: 30px;
   }

@@ -1,0 +1,9 @@
+.far.fa-eye {
+    position: absolute;
+    top: 284px;
+    left: 380px;
+}
+
+.far.fa-eye:hover {
+    cursor: pointer;
+}

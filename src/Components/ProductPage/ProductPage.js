@@ -36,7 +36,7 @@ const ProductPage = ({ match }) => {
         } else {
 
             console.log(match.params.id);
-            await postData('https://electroshopping-user-regist.herokuapp.com/setShopCart', { quantity: 1, id: match.params.id, userId:userId });
+            await postData('https://electroshopping-user-regist.herokuapp.com/setShopCart', { quantity: 1, id: match.params.id, userId: userId });
             history.push("/shopcart");
         }
     }
@@ -53,31 +53,33 @@ const ProductPage = ({ match }) => {
 
         return (
             // <h1>{productInfo[0].title}</h1>
-            <div className={styles.container}>
-                {/* <div className={styles.imagesContainer}> */}
-                <img className={styles.mainImage} src={mainImage}>
-                </img>
-                {/* </div> */}
-                <div>
-                    <h2 className={styles.title}>{productInfo[0].title}</h2>
-                    <div className={styles.content}>
-                        <div className={styles.pricesCont}>
-                            <div>
-                                {productInfo[0].oldPrice !== '' ?
-                                    <>
-                                        <span className={styles.oldPriceLabel}>Old price:</span> <span className={styles.oldPrice}>{productInfo[0].oldPrice}</span>
-                                    </> : ''
-                                }
+            <div className={styles.wrapper}>
+                <div className={styles.container}>
+                    {/* <div className={styles.imagesContainer}> */}
+                    <img className={styles.mainImage} src={mainImage}>
+                    </img>
+                    {/* </div> */}
+                    <div>
+                        <h2 className={styles.title}>{productInfo[0].title}</h2>
+                        <div className={styles.content}>
+                            <div className={styles.pricesCont}>
+                                <div>
+                                    {productInfo[0].oldPrice !== '' ?
+                                        <>
+                                            <span className={styles.oldPriceLabel}>Old price:</span> <span className={styles.oldPrice}>{productInfo[0].oldPrice}</span>
+                                        </> : ''
+                                    }
+                                </div>
+                                <span className={styles.price}>$ {productInfo[0].price}</span>
                             </div>
-                            <span className={styles.price}>$ {productInfo[0].price}</span>
+                            <button className={styles.addCartBtn} onClick={redirect}>Add to Cart</button>
                         </div>
-                        <button className={styles.addCartBtn} onClick={redirect}>Add to Cart</button>
                     </div>
-                </div>
-                <div className={styles.imagesContainer}>
-                    <img className={styles.smallImage} src={productInfo[0].image[0]} onClick={() => changeImage(1)}></img>
-                    <img className={styles.smallImage} src={productInfo[0].image[1]} onClick={() => changeImage(2)}></img>
-                    <img className={styles.smallImage} src={productInfo[0].image[2]} onClick={() => changeImage(3)}></img>
+                    <div className={styles.imagesContainer}>
+                        <img className={styles.smallImage} src={productInfo[0].image[0]} onClick={() => changeImage(1)}></img>
+                        <img className={styles.smallImage} src={productInfo[0].image[1]} onClick={() => changeImage(2)}></img>
+                        <img className={styles.smallImage} src={productInfo[0].image[2]} onClick={() => changeImage(3)}></img>
+                    </div>
                 </div>
             </div>
         )

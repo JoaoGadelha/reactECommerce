@@ -1,6 +1,7 @@
 .loadingGif {
     margin: 0 auto;
     display: block;
+    margin-bottom: 20px;
 }
 
 .emptyMsg {

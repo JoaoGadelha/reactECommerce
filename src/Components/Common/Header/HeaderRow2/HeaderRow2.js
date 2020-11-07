@@ -32,12 +32,12 @@ const HeaderRow2 = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    history.push("/search");
     await setIsLoading(true);
     let fetchFun = await fetch(`https://api-do-joao.herokuapp.com/find/type/${inputState}`)
     let json = await fetchFun.json();
     await setSearchResult(json);
     await setIsLoading(false);
-    history.push("/search");
   };
 
   const onClickSearchBar = () => {
